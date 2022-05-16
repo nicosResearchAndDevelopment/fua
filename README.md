@@ -2,6 +2,6 @@
 
 The Framework Universe Architecture
 
-## Glossary
+## [Glossary](./glossary/)
 
 ---
