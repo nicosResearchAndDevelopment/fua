@@ -1,0 +1,45 @@
+@prefix dct:                                                                                    <http://purl.org/dc/terms/> .
+@prefix foaf:                                                                                   <http://xmlns.com/foaf/0.1/> .
+@prefix org:                                                                                    <http://www.w3.org/ns/org#> .
+@prefix owl:                                                                                    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:                                                                                    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                                                                                   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:                                                                                   <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:                                                                                   <http://www.w3.org/2006/time#> .
+@prefix vann:                                                                                   <http://purl.org/vocab/vann/> .
+@prefix voaf:                                                                                   <http://purl.org/vocommons/voaf#> .
+@prefix void:                                                                                   <http://rdfs.org/ns/void#> .
+@prefix xsd:                                                                                    <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix nrd:                                                                                    <https://www.nicos-rd.com/> .
+
+@prefix fua:                                                                                    <https://www.nicos-rd.com.org/fua#> .
+
+fua:
+    a                             owl:Ontology ;
+    dct:creator                   <https://github.com/jlangkau> ;
+    dct:publisher                 <https://www.nicos-rd.com/> ;
+    dct:created                   "2016-06-01"^^xsd:date ;
+    dct:modified                  "2022-05-12"^^xsd:date ;
+    owl:versionInfo               "0.8.1" ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com.org/fua#" ;
+    vann:preferredNamespacePrefix "fua:" ;
+## TODO: "void:vocabulary" to be clarified!
+    void:vocabulary               dct:, foaf:, org:, owl:, rdf:, rdfs:, vann:, void:, voaf:, xsd: ;
+    skos:changeNote               """2022-05-16 : Initiation on GitHub."""^^xsd:string ;
+    skos:historyNote              """."""^^xsd:string ;
+    rdfs:isDefinedBy              nrd: ;
+.
+
+
+fua:
+    owl:imports <./core/fua.core.ttl> ;
+#    ## REM : order ALPHA
+#    #
+#    owl:imports <./collaboration/fua.collaboration.ttl> ;
+#    #
+#    owl:imports <./person/fua.employee.ttl> ;
+#    owl:imports <./person/fua.person.ttl> ;
+.
+
+## EOF fua.ttl
