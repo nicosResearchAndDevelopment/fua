@@ -31,7 +31,7 @@ if (43 > 42) {
 ## json
 
 The "JavaScript Object Notation", `json` do **NOT** allow comments, like `//` used by JavaScript itself. But
-given documentation of `fua` uses this to characters `//` to express inline comments.
+given documentation of `fua` uses this two characters `//` to express inline comments.
 
 ### Example:
 
