@@ -6,6 +6,6 @@ Core of `fua`.
 
 ## timestamp
 
-Property for arbitrary use to express a given timestamp in `xsd:TimeStamp'.
+Property for arbitrary use to express a given timestamp in `xsd:DatetimeStamp'.
 
 ---
