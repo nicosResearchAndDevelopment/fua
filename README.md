@@ -1,6 +1,8 @@
 # fua
 
-The Framework Universe Architecture
+The "Framework Universe Architecture".
+
+## Introduction
 
 ## Reading
 

@@ -2,26 +2,45 @@
 
 ---
 
-# D
+## B
+
+### Base Twin
+
+---
+
+## D
+
+### Data Consumer
+
+Given Agent requesting data has the role _Data Consumer_.
+
+#### See also:
+
+- [`Data Provider`](#data-provider)
+
+---
 
 ### Data, Infrastructure
 
 #### See:
-- [Infrastrucure Data](#infrastructure-data)
+
+- [`Infrastructure Data`](#infrastructure-data)
 
 ---
 
 ### Data, Meta
 
 #### See:
-- [Meta Data](#meta-data)
+
+- [`Meta Data`](#meta-data)
 
 ---
 
 ### Data, Payload
 
 #### See:
-- [Payload Data](#payload-data)
+
+- [`Payload Data`](#payload-data)
 
 ---
 
@@ -37,9 +56,19 @@
 
 - [`fua.DataVerse.DataDomain`](../dataverse/README.md#data-domain)
 
-See also:
+#### See also:
 
 - [`Data Verse`](#data-verse)
+
+---
+
+### Data Provider
+
+Given Agent called by a request, send by a Data Consumer and providing data asked for, has the role _Data Provider_.
+
+#### See also:
+
+- [`Data Consumer`](#data-consumer)
 
 ---
 
@@ -49,7 +78,7 @@ See also:
 
 - [`Data Domain`](#data-domain)
 
-See also:
+#### See also:
 
 - [`Data Verse`](#data-verse)
 
@@ -68,6 +97,10 @@ See also:
 ---
 
 ### Domain
+
+---
+
+### Digital Twin
 
 ---
 
@@ -97,13 +130,35 @@ See also:
 
 ### fua
 
-The "Framework Universe Architecture".
+Shortcut for "Framework Universe Architecture", also used as prefix or namespace.
 
 ---
 
 ## G
 
+### GAIAboX
+
+The representative of working
+[service instances and underlying applications](https://github.com/nicosResearchAndDevelopment/gbx/README.md).
+
+Shortcut is [`gbx`](#gbx).
+
+#### See:
+
+- [`gbx`](https://github.com/nicosResearchAndDevelopment/gbx/README.md)
+
+### gbx
+
+Acronym, shortcut and prefix of [`GAIAboX`](#gaiabox), the representative for services and applications.
+
 ### Glossary
+
+`fua`s [glossary](./README.md) is used **NOT** only for **fua** itself, but also used for [`GAIAboX`](#gaiabox)
+and so for [`this
+repository`](https://github.com/nicosResearchAndDevelopment/gbx/README.md) bringing **fua`s** ideas, concepts and
+mechanics to life.
+
+The [glossary](./README.md) acts as a gate to further information and more detailed explanations.
 
 ---
 
@@ -122,7 +177,9 @@ The "Framework Universe Architecture".
 ### Layer, Persistence
 
 #### See:
-- [Payload Data](#persistence-layer)
+
+- [`Payload Data`](#persistence-layer)
+
 ---
 
 ## M
@@ -149,6 +206,10 @@ The "Framework Universe Architecture".
 
 ---
 
+### Physical Twin
+
+---
+
 ### Property
 
 #### See:
@@ -163,6 +224,22 @@ The "Framework Universe Architecture".
 ## S
 
 ### Subject
+
+---
+
+## T
+
+### Twin, Digital
+#### See:
+- [`Digital Twin`](#digital-twin)
+
+### Twin, Base
+#### See:
+- [`Base Twin`](#base-twin)
+
+### Twin, Physical
+#### See:
+- [`Physical Twin`](#physical-twin)
 
 ---
 
