@@ -110,6 +110,8 @@ Given Agent called by a request, send by a Data Consumer and providing data aske
 
 [`fua`](#fua) works with following examples:
 
+https://github.com/nicosResearchAndDevelopment/fua/tree/main/%C3%A8xample/weatherstation
+
 #### [Weather Station](../example/weatherstation/README.md)
 
 #### [Elevator](../example/elevator/README.md)
