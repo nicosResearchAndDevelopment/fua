@@ -106,14 +106,13 @@ Hope that helps!
 
 ---
 
----
-
 ## Glossary
 
 `fuas` [glossary](../glossary/README.md) is a good starting point itself, showing all those _well known_
 buzz-words and how `fua` assimilates and paraphrases them.
 
 The [glossary](../glossary/README.md) is something like a Gate Keeper (for `fuas` terminology) and not at least
-as an _eye of a needle_: incoming links **SHOULD** land [here](../glossary/README.md#glossary) (**RECOMMENDED**).
+as an _eye of a needle_: incoming links land [here](../glossary/README.md#glossary) (**RECOMMENDED**) - most
+of the time.
 
 ---
