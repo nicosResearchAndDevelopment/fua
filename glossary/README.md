@@ -1295,6 +1295,10 @@ The Shape Constraint Language.
 
 - [`turtle`](#turtle)
 
+#### see also
+
+- [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/)
+
 ```#shacl```
 
 ---
@@ -1309,7 +1313,7 @@ The Shapes Constraint Language.
 
 #### see also
 
-- [`shacl`](#shacl)
+- [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/)
 
 ---
 
@@ -1369,7 +1373,7 @@ The "Transformation, Translation, Transmutation and Conversion Language"
 
 #### see
 
-- [Decide Profile TRACL](../extension/decide/profile/tracl/README.md)
+- [`Decide Profile TRACL`](../extension/decide/profile/tracl/README.md)
 - [`ODRL ("Open Digital Rights Language")`](#odrl)
 
 ```#tracl, #control-language, #control```
