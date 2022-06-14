@@ -5,9 +5,7 @@ Glossary and index for the "Framework Univer Architecture" (**FUA**).
 ## Introduction
 
 `fua`s [glossary](./README.md) is used **NOT** only for **fua** itself, but also used for [`GAIAboX (GBX)`](#gaiabox)
-and so for
-[`this repository`](https://github.com/nicosResearchAndDevelopment/gbx/README.md) bringing **fua`s** ideas, concepts and
-mechanics to life.
+and so for [`this repository`](../gbx/README.md) bringing **fua`s** ideas, concepts and mechanics to life.
 
 ## Summary
 
@@ -581,13 +579,13 @@ Shortcut for "Framework Universe Architecture", also used as prefix or namespace
 ### GAIAboX
 
 The representative of working
-[service instances and underlying applications](https://github.com/nicosResearchAndDevelopment/gbx/README.md).
+[service instances and underlying applications](../gbx/README.md).
 
 Shortcut is [`gbx`](#gbx).
 
 #### see
 
-- [`gbx`](https://github.com/nicosResearchAndDevelopment/gbx/README.md)
+- [`gbx`](../gbx/README.md)
 
 ```#gaiabox, #gbx```
 
@@ -1232,7 +1230,7 @@ being [instantiated](#service-instance).
 
 - [`Service Model`](#service-instance)
 - [`Service Instance`](#service-model)
-- [GAIAboX (GBX)](https://github.com/nicosResearchAndDevelopment/gbx)
+- [GAIAboX (GBX)](../gbx/README.md)
 
 #### see also
 
@@ -1247,7 +1245,7 @@ being [instantiated](#service-instance).
 #### see
 
 - [`Web Service`](#web-service)
-- [GAIAboX (GBX)](https://github.com/nicosResearchAndDevelopment/gbx)
+- [GAIAboX (GBX)](../gbx/README.md)
 
 ---
 
@@ -1257,7 +1255,7 @@ A "Service Instance" is an up-and-running [Service](#service), hosted on a _serv
 
 #### see
 
-- [GAIAboX (GBX)](https://github.com/nicosResearchAndDevelopment/gbx)
+- [GAIAboX (GBX)](../gbx/README.md)
 
 ```#service-instance```
 
@@ -1271,7 +1269,7 @@ leading to an up-and-running [Service Instance](#service-instance) providing its
 
 #### see
 
-- [GAIAboX (GBX)](https://github.com/nicosResearchAndDevelopment/gbx)
+- [GAIAboX (GBX)](../gbx/README.md)
 
 ```#service-layer```
 
@@ -1283,7 +1281,7 @@ A "Service Model" describes (and sometimes configures) a [Service](#service).
 
 #### see
 
-- [GAIAboX (GBX)](https://github.com/nicosResearchAndDevelopment/gbx)
+- [GAIAboX (GBX)](../gbx/README.md)
 
 ```#service-model```
 
