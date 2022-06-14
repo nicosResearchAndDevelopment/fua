@@ -13,7 +13,7 @@
 
 @prefix nrd:                                                                                    <https://www.nicos-rd.com/> .
 
-@prefix fua:                                                                                    <https://www.nicos-rd.com.org/fua#> .
+@prefix fua:                                                                                    <https://www.nicos-rd.com/fua#> .
 
 fua:
     a                             owl:Ontology ;
@@ -22,7 +22,7 @@ fua:
     dct:created                   "2016-06-01"^^xsd:date ;
     dct:modified                  "2022-05-12"^^xsd:date ;
     owl:versionInfo               "0.8.1" ;
-    vann:preferredNamespaceUri    "https://www.nicos-rd.com.org/fua#" ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/fua#" ;
     vann:preferredNamespacePrefix "fua:" ;
 ## TODO: "void:vocabulary" to be clarified!
     void:vocabulary               dct:, foaf:, org:, owl:, rdf:, rdfs:, vann:, void:, voaf:, xsd: ;

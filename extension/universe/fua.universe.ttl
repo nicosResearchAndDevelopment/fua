@@ -1,0 +1,129 @@
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org:  <http://www.w3.org/ns/org#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix nrd:  <https://www.nicos-rd.com/> .
+
+@prefix fua:  <https://www.nicos-rd.com/fua#> .
+@prefix narr: <https://www.nicos-rd.com/fua/narration#> .
+@prefix dbc:  <http://dbpedia.org/resource/Category:> .
+
+@prefix dbo:  <https://dbpedia.org/ontology/> .
+@prefix dbr:  <https://dbpedia.org/resource/> .
+@prefix univ: <https://www.nicos-rd.com/fua/universe#>  .
+
+
+univ:
+    a                             owl:Ontology ;
+    a                             narr:Narration ;
+    skos:notation                 "univ"^^xsd:string ;
+    rdfs:label                    "univ"@en ;
+    ## region meta
+    dct:creator                   <https://github.com/jlangkau> ;
+    dct:publisher                 <https://www.nicos-rd.com/> ;
+    dct:created                   "2018-02-04"^^xsd:date ;
+    dct:modified                  "2022-05-25"^^xsd:date ;
+    owl:versionInfo               "0.4.2" ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/fua/universe#" ;
+    vann:preferredNamespacePrefix "univ:" ;
+    narr:tag                      "#univ" ;
+    ## endregion footer
+    rdfs:isDefinedBy              fua: ;
+.
+
+univ:Universe
+    a                owl:Class ;
+    skos:notation    "Universe"^^xsd:string ;
+    rdfs:label       "Universe"@en ;
+    dct:description  """Class of Universes."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:universe
+    a                owl:ObjectProperty ;
+    skos:notation    "universe"^^xsd:string ;
+    rdfs:label       "Universe"@en ;
+    rdfs:domain      univ:Multiverse ;
+    rdfs:range       univ:Universe ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:galaxy
+    a                owl:ObjectProperty ;
+    skos:notation    "galaxy"^^xsd:string ;
+    rdfs:label       "Galaxy"@en ;
+    rdfs:domain      univ:Universe ;
+    rdfs:range       dbo:Galaxy ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:star
+    a                owl:ObjectProperty ;
+    skos:notation    "galaxy"^^xsd:string ;
+    rdfs:label       "Galaxy"@en ;
+    rdfs:domain      univ:PlanetarySystem ;
+    rdfs:range       dbo:Star ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:PlanetarySystem
+    a                owl:Class ;
+    skos:notation    "PlanetarySystem"^^xsd:string ;
+    rdfs:label       "Planetary System"@en ;
+    dct:description  """Class of Planetary Systems."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:planetarySystem
+    a                owl:ObjectProperty ;
+    skos:notation    "galaxy"^^xsd:string ;
+    rdfs:label       "Galaxy"@en ;
+    rdfs:domain      dbo:Galaxy ;
+    rdfs:range       univ:PlanetarySystem ;
+    rdfs:isDefinedBy fua: ;
+.
+
+
+## see :
+### http://mappings.dbpedia.org/server/ontology/classes/Planet
+### http://mappings.dbpedia.org/server/ontology/classes/#Planet
+
+univ:planet
+    a                owl:ObjectProperty ;
+    skos:notation    "planet"^^xsd:string ;
+    rdfs:label       "Planet"@en ;
+    rdfs:domain      univ:PlanetarySystem ;
+    rdfs:range       dbo:Planet ;
+    rdfs:isDefinedBy fua: ;
+.
+
+## region MultiVerse
+
+univ:MultiVerse
+    a                owl:Class ;
+    skos:notation    "MultiVerse"^^xsd:string ;
+    rdfs:label       "MultiVerse"@en ;
+    dct:description  """Class of MultiVerses."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+univ:multiVerse
+    a                owl:ObjectProperty ;
+    skos:notation    "multiVerse"^^xsd:string ;
+    rdfs:label       "MultiVerse"@en ;
+    rdfs:range       univ:MultiVerse ;
+    rdfs:isDefinedBy fua: ;
+.
+
+## endregion MultiVerse
+
+## EOF fua.universe.ttl

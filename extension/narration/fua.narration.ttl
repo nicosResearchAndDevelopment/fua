@@ -1,0 +1,125 @@
+@prefix dct:                                                                                     <http://purl.org/dc/terms/> .
+@prefix foaf:                                                                                    <http://xmlns.com/foaf/0.1/> .
+@prefix org:                                                                                     <http://www.w3.org/ns/org#> .
+@prefix owl:                                                                                     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:                                                                                     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                                                                                    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:                                                                                    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:                                                                                    <http://www.w3.org/2006/time#> .
+@prefix vann:                                                                                    <http://purl.org/vocab/vann/> .
+@prefix voaf:                                                                                    <http://purl.org/vocommons/voaf#> .
+@prefix void:                                                                                    <http://rdfs.org/ns/void#> .
+@prefix xsd:                                                                                     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix nrd:                                                                                     <https://www.nicos-rd.com/> .
+
+@prefix fua:                                                                                     <https://www.nicos-rd.com/fua#> .
+
+@prefix narr:                                                                                    <https://www.nicos-rd.com/fua/narration#> .
+
+narr:
+    a                             owl:Ontology ;
+    a                             narr:Narration ;
+    skos:notation                 "narr"^^xsd:string ;
+    rdfs:label                    "narr"@en ;
+    ## region meta
+    dct:creator                   <https://github.com/jlangkau> ;
+    dct:contributor               <https://github.com/spetrac> ;
+    dct:publisher                 <https://www.nicos-rd.com/> ;
+    dct:created                   "2022-05-24"^^xsd:date ;
+    dct:modified                  "2022-05-24"^^xsd:date ;
+    owl:versionInfo               "0.0.1" ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/fua/narration#" ;
+    vann:preferredNamespacePrefix "narr:" ;
+## TODO: "void:vocabulary" to be clarified!
+    void:vocabulary               dct:, foaf:, org:, owl:, rdf:, rdfs:, vann:, void:, voaf:, xsd: ;
+    ## endregion meta
+    ## region header
+    dct:description               """."""@en ;
+    narr:introduction              [ a narr:Introduction ] ;
+    ## endregion header
+    ## region content
+    narr:summary                  [ a narr:Summary ; ] ;
+    ## endregion content
+    ## region footer
+    narr:epilog                   [ ] ;
+    ## TODO : narr:reference
+    skos:changeNote               """2022-05-24 : Initiation."""^^xsd:string ;
+#    skos:historyNote              """."""^^xsd:string ;
+    narr:tag                      "#fua" ;
+    ## endregion footer
+    rdfs:isDefinedBy              fua: ;
+.
+
+narr:Narration
+    a                owl:Class ;
+    skos:notation    "Narration"^^xsd:string ;
+    rdfs:label       "Narration"@en ;
+    dct:description  """."""@en ;
+    ## TODO : narr:content "" ;
+    ## TODO : narr:narration "" ;
+    rdfs:comment     """."""@en ;
+    ## TODO : narr:tag "" ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:narration
+    a                owl:ObjectProperty ;
+    skos:notation    "narration"^^xsd:string ;
+    rdfs:label       "Narration"@en ;
+    rdfs:range       narr:Narration ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:Introduction
+    a                owl:Class ;
+#    a                narr:Narration ;
+    skos:notation    "Introduction"^^xsd:string ;
+    rdfs:label       "Introduction"@en ;
+    dct:description  """."""@en ;
+    ## TODO : narr:content "" ;
+    ## TODO : narr:narration "" ;
+    rdfs:comment     """."""@en ;
+    ## TODO : narr:tag "" ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:introduction
+    a                owl:ObjectProperty ;
+    skos:notation    "introduction"^^xsd:string ;
+    rdfs:label       "Introduction"@en ;
+    rdfs:range       narr:Introduction ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:Content
+    a                owl:Class ;
+    a                narr:Narration ;
+    skos:notation    "Content"^^xsd:string ;
+    rdfs:label       "Content"@en ;
+    dct:description  """."""@en ;
+    ## TODO : narr:content "" ;
+    ## TODO : narr:narration "" ;
+    rdfs:comment     """."""@en ;
+    ## TODO : narr:tag "" ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:content
+    a                owl:ObjectProperty ;
+    skos:notation    "content"^^xsd:string ;
+    rdfs:label       "Content"@en ;
+    rdfs:range       narr:Content ;
+    rdfs:isDefinedBy fua: ;
+.
+
+narr:contentType
+    a                owl:ObjectProperty ;
+    skos:notation    "contentType"^^xsd:string ;
+    rdfs:label       "Content Type"@en ;
+    rdfs:domain      xsd:Content ;
+    rdfs:range       xsd:string ;
+    rdfs:isDefinedBy fua: ;
+.
+
+## EOF fua.narration.ontology.ttl

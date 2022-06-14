@@ -1,0 +1,88 @@
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org:  <http://www.w3.org/ns/org#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix nrd:  <https://www.nicos-rd.com/> .
+
+@prefix fua:  <https://www.nicos-rd.com/fua#> .
+@prefix narr: <https://www.nicos-rd.com/fua/narration#> .
+@prefix univ: <https://www.nicos-rd.com/fua/universe#> .
+
+@prefix dbc:  <http://dbpedia.org/resource/Category:> .
+@prefix dbr:  <https://dbpedia.org/resource/> .
+@prefix dbo:  <https://dbpedia.org/ontology/> .
+
+@prefix puni: <https://www.nicos-rd.com/data/paralleluniverse/> .
+@prefix tuni: <https://www.nicos-rd.com/data/theuniverse/> .
+
+tuni:
+    a                univ:Universe ;
+    rdfs:label       "The Universe"@en ;
+    univ:galaxy      tuni:MilkyWay ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+tuni:MilkyWay
+    a                    dbo:Galaxy ;
+    rdfs:label           "Milky Way"@en ;
+    univ:planetarySystem tuni:SolarSystem ;
+    rdfs:isDefinedBy     tuni: ;
+.
+
+tuni:SolarSystem
+    a                univ:PlanetarySystem ;
+    rdfs:label       "Solar System"@en ;
+    univ:star        tuni:Sun ;
+    univ:planet      tuni:Earth ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+tuni:Sun
+    a                dbo:Star ;
+    rdfs:label       "Sun"@en ;
+    owl:sameAs       dbr:Sun ;
+    rdfs:seeAlso     dbc:Sun ;
+    rdfs:seeAlso     <https://web.archive.org/web/20110810133537/http:/alienworlds.glam.ac.uk/sunStructure.html> ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+tuni:Earth
+    a                dbo:Planet ;
+    rdfs:label       "Earth"@en ;
+    owl:sameAs       dbr:Earth ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+## region Parallel Universe
+
+puni:
+    a                univ:Universe ;
+    rdfs:label       "The Parallel Universe"@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+## endregion Parallel Universe
+
+## region Multiverse
+
+tuni:MultiVerse
+    a                univ:MultiVerse ;
+    rdfs:label       "The MultiVerse"@en ;
+    univ:universe    tuni: ;
+    univ:universe    puni: ;
+    rdfs:comment     """Yes, MultiVerse is defined by 'tuni:'. Someone has to do this job... And: 'tuni:' discovers 'puni:' - and not the other way around..."""@en ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+## endregion Multiverse
+
+## EOF fua.tuni.ttl

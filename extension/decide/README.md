@@ -23,15 +23,21 @@ Those policies will be _enforced_ - or, in other words, _executed_.
 
 ## Profile
 
-ODRL-extension are defined in so called 'Profiles'. `fua` works with the following listed here:
-
-### dacl
-
-`dacl`, the "Dynamic Access Control Language" expressing some actions for access issues.
+ODRL-extension are defined in so called ['Profiles'](./profile/README.md). `fua` works with the following
+listed [here](./profile/README.md):
 
 ### time
 
 Profile with `time`-centric constraints, aligned to [Time Ontology in OWL](https://www.w3.org/TR/owl-time/).
+
+The [time-primer](./profile/time/README.md) shows some basic time related ideas and how `fua` handles time related (
+binary) operators.
+
+---
+
+### dacl
+
+`dacl`, the "Dynamic Access Control Language" expressing some actions for access issues.
 
 ### tracl
 

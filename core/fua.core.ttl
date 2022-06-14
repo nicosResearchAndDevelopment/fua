@@ -22,4 +22,24 @@ fua:timestamp
     rdfs:isDefinedBy fua: ;
 .
 
+fua:sourceTimestamp
+    a                  owl:DatatypeProperty ;
+    rdfs:subPropertyOf fua:timestamp ;
+    skos:notation      "sourceTimestamp"^^xsd:string ;
+    rdfs:label         "Source Timestamp"@en ;
+    rdfs:label         "Quellen-Zeitstempel"@de ;
+    rdfs:range         xsd:dateTimeStamp ;
+    rdfs:isDefinedBy   fua: ;
+.
+
+fua:serverTimestamp
+    a                  owl:DatatypeProperty ;
+    rdfs:subPropertyOf fua:timestamp ;
+    skos:notation      "serverTimestamp"^^xsd:string ;
+    rdfs:label         "Server Timestamp"@en ;
+    rdfs:label         "Server-Zeitstempel"@de ;
+    rdfs:range         xsd:dateTimeStamp ;
+    rdfs:isDefinedBy   fua: ;
+.
+
 ## EOF fua.core.ttl
