@@ -42,4 +42,24 @@ fua:serverTimestamp
     rdfs:isDefinedBy   fua: ;
 .
 
+fua:agent
+    a                owl:DatatypeProperty ;
+    skos:notation    "agent"^^xsd:string ;
+    dct:description  """Arbitrary property to hold an agent ('foaf:Agent')."""@en ;
+    rdfs:label       "Agent"@en ;
+    rdfs:label       "Agent"@de ;
+    rdfs:range       foaf:Agent ;
+    rdfs:isDefinedBy fua: ;
+.
+
+fua:private
+    a                owl:DatatypeProperty ;
+    skos:notation    "private"^^xsd:string ;
+    dct:description  """Any resource (like 'foaf:Person') using 'fua:private' states **NOT** acting on behalf any other agent ('foaf:Agent')."""@en ;
+    rdfs:label       "Private"@en ;
+    rdfs:label       "Privat"@de ;
+    rdfs:range       xsd:boolean ;
+    rdfs:isDefinedBy fua: ;
+.
+
 ## EOF fua.core.ttl
