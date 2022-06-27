@@ -110,6 +110,18 @@ The "Application Layer" is populated with given [application](#application).
 
 ---
 
+### Authentication Service
+
+```#authentication-service, #ats```
+
+---
+
+### Authorization Service
+
+```#authorization-service, #ats```
+
+---
+
 ### Authority
 
 An "Authority" is an [agent](#agent) generating data (like [identifiers](#internal-identifier)) and information
@@ -117,8 +129,9 @@ attached to given identifiable resource.
 
 `fua` uses it by those (sub-classed) concepts:
 
-- Certificate Authority, [DataVerse (**DAVE**)](../extension/dataverse/README.md)
-- Certification Body, [DataVerse (**DAVE**)](../extension/dataverse/README.md)
+- Certificate Authority, [DataVerse (**DAVE**)](../extension/dataverse/README.md#certificate-authority)
+- Notarisation, [DataVerse (**DAVE**)](../extension/dataverse/README.md#notarisation)
+- Certification Body, [DataVerse (**DAVE**)](../extension/dataverse/README.md#certification-body)
 
 #### see
 
@@ -127,7 +140,7 @@ attached to given identifiable resource.
 - [authority, Wikidata](https://www.wikidata.org/wiki/Q174834)
 - [Authority (disambiguation), Wikipedia](https://en.wikipedia.org/wiki/Authority_(disambiguation))
 
-```#authority```
+```#authority, #agent```
 
 ---
 
@@ -157,6 +170,24 @@ Bob has to execute commands, being [controlled](#controller) by [Alice](#alice).
 ---
 
 ## C
+
+### Certificate Authority
+
+---
+
+### Certification Body
+
+---
+
+### Clearing House
+
+#### see
+
+- [Clearing House (**DAVE**)](../extension/dataverse/README.md#clearing-house).
+
+```#clearing-house```
+
+---
 
 ### Constraint
 
@@ -488,7 +519,8 @@ A [Data Domain](#data-domain) even exists _without_ exchanging [data](#data).
 
 ### DataVerse
 
-["DataVerse" (fua-extension)](../extension/dataverse/README.md) is a collection of [Data Domains](#data-domain), hovered
+["DataVerse" (fua-extension)](../extension/dataverse/README.md) ([**DAVE**](./shortcut.md#dave)) is a collection
+of [Data Domains](#data-domain), hovered
 by [Data Spaces](#data-space).
 
 #### see
@@ -666,6 +698,12 @@ representing _the_ [information](#information) it makes sense in accordance with
 #### see
 
 - [IDEX](#idex)
+
+---
+
+### Identity Provider
+
+"Identity Provider" [(**IdP**)](./shortcut.md#idp)].
 
 ---
 
@@ -847,6 +885,16 @@ uses [`Linked Data`](#linked-data).
 
 ---
 
+### Logging Service
+
+#### see
+
+- [Logging Service (**DAVE**)](../extension/dataverse/README.md#logging-service).
+
+```#logging-service```
+
+---
+
 ## M
 
 ### Machine Readable Policy
@@ -950,7 +998,7 @@ humans. Typically, such a policy can be spoken, or to outlive, written down.
 
 ### ODRL
 
-**ODRL** ("Open Digital Rights Language") is a
+"Open Digital Rights Language" [(**ODRL**)](./shortcut.md#odrl)  is a
 [Rights Expression Language (**REL**)](#rights-expression-language).
 
 **ODRL** can be extended by [profiles](https://www.w3.org/TR/odrl-model/#profile). `fua` does so defining

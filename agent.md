@@ -14,4 +14,14 @@
 | twitter     |           | [@LostInDataSpace](https://twitter.com/LostInDataSpace)                                        |
 | solid (web) |     x     | [card#me](https://jottomat.solidweb.org/profile/card#me) |
 
+## Alice
+
+---
+
+## Bob
+
+---
+
+## Charly
+
 ---

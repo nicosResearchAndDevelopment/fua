@@ -25,10 +25,13 @@
 @prefix tuni: <https://www.nicos-rd.com/data/theuniverse/> .
 
 tuni:
-    a                univ:Universe ;
-    rdfs:label       "The Universe"@en ;
-    univ:galaxy      tuni:MilkyWay ;
-    rdfs:isDefinedBy tuni: ;
+    a                             univ:Universe ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/data/theuniverse/" ;
+    vann:preferredNamespacePrefix "tuni" ;
+    rdfs:label                    "The Universe"@en ;
+    univ:galaxy                   tuni:MilkyWay ;
+    rdfs:comment                  """Yes, it defines itself."""@en ;
+    rdfs:isDefinedBy              tuni: ;
 .
 
 tuni:MilkyWay
@@ -65,9 +68,11 @@ tuni:Earth
 ## region Parallel Universe
 
 puni:
-    a                univ:Universe ;
-    rdfs:label       "The Parallel Universe"@en ;
-    rdfs:isDefinedBy fua: ;
+    a                             univ:Universe ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/data/paralleluniverse/" ;
+    vann:preferredNamespacePrefix "puni" ;
+    rdfs:label                    "The Parallel Universe"@en ;
+    rdfs:isDefinedBy              fua: ;
 .
 
 ## endregion Parallel Universe

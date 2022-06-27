@@ -19,7 +19,7 @@ best: ([IA](../glossary/README.md#ia)) "What is going on here?".
 
 ### Example "43>42"
 
-[IA](../glossary/README.md#ia) : "Is '43' larger than '42' and if "YES" get it and put it to 'that'".
+> [IA](../glossary/README.md#ia) : "Is '43' larger than '42' and if "YES" get it and put it to 'that'".
 
 ```pseudocode
 if (43 > 42) {
@@ -27,7 +27,7 @@ if (43 > 42) {
 }
 ```
 
-[IA](../glossary/README.md#ia) : _If `43` is larger than `42`, than execute function `getit()` and put its result
+> [IA](../glossary/README.md#ia) : _If `43` is larger than `42`, than execute function `getit()` and put its result
 in `that`_.
 
 ---
@@ -56,6 +56,30 @@ Using _illicit_ comment `//` in **JSON**.
 
 _That artefact shown here and expressed in **JSON**, is the result of given function [`getit()`](#example-4342) and
 contains a malicious inline comment, tagged as a remark (`REM`)_.
+
+## Annotations
+
+### REM
+
+[(**REM**, shortcut)](../glossary/shortcut.md#rem)
+
+### TODO
+
+[(**TODO**, shortcut)](../glossary/shortcut.md#todo)
+
+### TBC
+
+[(**TBC**, shortcut)](../glossary/shortcut.md#tbc)
+
+### TBD
+
+[(**TBD**, shortcut)](../glossary/shortcut.md#tbd)
+
+### TLDR
+
+[(**TLDR**, shortcut)](../glossary/shortcut.md#tldr)
+
+---
 
 ## Tags
 
@@ -86,6 +110,14 @@ This is often shown in `fuas` [glossary](../glossary/README.md) (focused on `#li
 /// #linked-data, #infrastructure-data, #infrastructure-layer, #layer ///
 ```
 
+fits to json
+
+```json
+{
+    "fua:tag": [ "#linked-data", "#infrastructure-data", "#infrastructure-layer", "#layer" ]
+}
+```
+
 ### Traceability
 
 Take your **IDE**, clone `fua` and search for [`#linked-data`](../glossary/README.md#linked-data). While `fua` keeps
@@ -114,5 +146,11 @@ buzz-words and how `fua` assimilates and paraphrases them.
 The [glossary](../glossary/README.md) is something like a Gate Keeper (for `fuas` terminology) and not at least
 as an _eye of a needle_: incoming links land [here](../glossary/README.md#glossary) (**RECOMMENDED**) - most
 of the time.
+
+---
+
+## Shortcut
+
+[Here](../glossary/shortcut.md),
 
 ---
