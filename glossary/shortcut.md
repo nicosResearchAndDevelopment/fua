@@ -2,34 +2,37 @@
 
 Shortcuts, abbreviations and acronyms used in `fua`.
 
-| shortcut      | Description                        | Comment                    |
-|---------------|:-----------------------------------|----------------------------|
-| [ATS](#ats)   | Authentication Service             |                            |
-| [AOS](#aos)   | Authorization Service              |                            |
-| [CA](#ca)     | Certificate Authority              |                            |
-| [CB](#cb)     | Certification Body                 | same as: [**NOTA**](#nota) |
-| [CH](#ch)     | Clearing House                     |                            |
-| [DAVE](#dave) | DataVerse                          |                            |
-| [DS](#ds)     | Data Space                         |                            |
-| [EC](#ec)     | Eco System                         | Data.                      |
-| [IA](#ia)     | Information, Anthropocentric       |                            |
-| [ID](#id)     | Identifier                         |                            |
-| [IDE](#ide)   | Integrated Development Environment |                            |
-| [IdP](#idp)   | Identity Provider                  |                            |
-| [LS](#ls)     | Logging Service                    |                            |
-| [NLP](#nlp)   | Natural Language Policy            |                            |
-| [NOTA](#nota) | Notarization                       | same as: [**CB**](#cb)     |
-| [OA](#oa)     | Operating Agent                    |                            |
-| [OC](#oc)     | Operating Company                  |                            |
-| [OP](#op)     | Operating Person                   |                            |
-| [ORDL](#odrl) | Open Digital Rights Language       |                            |
-| [REG](#reg)   | Registry                           |                            |
-| [REL](#rel)   | Rights Expression Language         |                            |
-| [REM](#rem)   | Remark                             |                            |
-| [TBC](#tbc)   | To Be Clarified!                   |                            |
-| [TBD](#tbd)   | To Be Discussed!                   |                            |
-| [TODO](#todo) | To Do!                             |                            |
-| [TLDR](#tldr) | Too Long, Didn't Read!             |                            |
+| shortcut        | Description                        | Comment                    |
+|-----------------|:-----------------------------------|----------------------------|
+| [ATS](#ats)     | Authentication Service             |                            |
+| [AOS](#aos)     | Authorization Service              |                            |
+| [AU](#au)       | Authority                          |                            |
+| [CA](#ca)       | Certificate Authority              |                            |
+| [CB](#cb)       | Certification Body                 | same as: [**NOTA**](#nota) |
+| [CH](#ch)       | Clearing House                     |                            |
+| [DACL](#dacl)   | Dynamic Access Control Language    |                            |
+| [DAVE](#dave)   | DataVerse                          |                            |
+| [DS](#ds)       | Data Space                         |                            |
+| [EC](#ec)       | Eco System                         | Data.                      |
+| [IA](#ia)       | Information, Anthropocentric       |                            |
+| [ID](#id)       | Identifier                         |                            |
+| [IDE](#ide)     | Integrated Development Environment |                            |
+| [IdP](#idp)     | Identity Provider                  |                            |
+| [LS](#ls)       | Logging Service                    |                            |
+| [NLP](#nlp)     | Natural Language Policy            |                            |
+| [NOTA](#nota)   | Notarization                       | same as: [**CB**](#cb)     |
+| [OA](#oa)       | Operating Agent                    |                            |
+| [OC](#oc)       | Operating Company                  |                            |
+| [OP](#op)       | Operating Person                   |                            |
+| [ORDL](#odrl)   | Open Digital Rights Language       |                            |
+| [REG](#reg)     | Registry                           |                            |
+| [REL](#rel)     | Rights Expression Language         |                            |
+| [REM](#rem)     | Remark                             |                            |
+| [TBC](#tbc)     | To Be Clarified!                   |                            |
+| [TBD](#tbd)     | To Be Discussed!                   |                            |
+| [TODO](#todo)   | To Do!                             |                            |
+| [TLDR](#tldr)   | Too Long, Didn't Read!             |                            |
+| [TRACL](#tracl) | Transformation Control Language    |                            |
 
 _Table: `fua` shortcuts_.
 
@@ -42,6 +45,12 @@ _Table: `fua` shortcuts_.
 ## AOS
 
 [Authorization Service](./README.md#authorization-service).
+
+---
+
+## AU
+
+Authority.
 
 ---
 
@@ -66,6 +75,10 @@ same as:
 ## CH
 
 [Clearing House](./README.md#clearing-house).
+
+---
+
+## DACL
 
 ---
 
@@ -330,5 +343,9 @@ A very, very long story (very boring, indeed.
 ```
 
 _Example in m`markdown`_.
+
+---
+
+## TRACL
 
 ---

@@ -23,6 +23,7 @@
 
 @prefix puni: <https://www.nicos-rd.com/data/paralleluniverse/> .
 @prefix tuni: <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix earth: <https://www.nicos-rd.com/data/theuniverse/Earth/> .
 
 @prefix dave: <https://www.nicos-rd.com/fua/dataverse#> .
 
@@ -35,7 +36,7 @@ tuni:
     dave:ecoSystem puni: ;
 .
 
-tuni:Earth
+earth:
     a              dbo:Planet ;
     a              dave:DataVerse ;
     a              dave:EcoSystem ;
@@ -56,6 +57,7 @@ tuni:MultiVerse
     a              dave:DataVerse ;
     # REM: it is **NOT** an Eco System ('dave:EcoSystem')! So far...
     dave:dataVerse tuni: ;
+    dave:dataVerse earth: ;
     dave:dataVerse puni: ;
     dave:ecoSystem tuni: ;
     dave:ecoSystem puni: ;

@@ -124,8 +124,8 @@ The "Application Layer" is populated with given [application](#application).
 
 ### Authority
 
-An "Authority" is an [agent](#agent) generating data (like [identifiers](#internal-identifier)) and information
-attached to given identifiable resource.
+An "Authority" ([**AU**](./shortcut.md#au)) is an [agent](#agent) generating
+data (like [identifiers](#internal-identifier)) and information attached to given identifiable resource.
 
 `fua` uses it by those (sub-classed) concepts:
 
@@ -173,9 +173,13 @@ Bob has to execute commands, being [controlled](#controller) by [Alice](#alice).
 
 ### Certificate Authority
 
+```#certificate-authority```
+
 ---
 
 ### Certification Body
+
+```#certification-body```
 
 ---
 
@@ -209,6 +213,16 @@ A "Command" is an _instruction_, wrapped by a [control](#control) and send by a 
 targeted to receiving [agent](#agent).
 
 ```#command```
+
+---
+
+### Computing Data
+
+#### see also
+
+- [Data (computing), Wikipedia](https://en.wikipedia.org/wiki/Data_(computing))
+
+```#computing-data```
 
 ---
 
@@ -369,6 +383,14 @@ decorated with some  [Meta Data](#meta-data), etc.
 #### see
 
 - [Trusted Data Exchange](#trusted-data-exchange)
+
+---
+
+### Data, Computing
+
+#### see
+
+- [`Computing Data`](#Computing-data)
 
 ---
 
@@ -703,7 +725,7 @@ representing _the_ [information](#information) it makes sense in accordance with
 
 ### Identity Provider
 
-"Identity Provider" [(**IdP**)](./shortcut.md#idp)].
+"Identity Provider" [(**IdP**)](./shortcut.md#idp).
 
 ---
 
@@ -1003,8 +1025,8 @@ humans. Typically, such a policy can be spoken, or to outlive, written down.
 
 **ODRL** can be extended by [profiles](https://www.w3.org/TR/odrl-model/#profile). `fua` does so defining
 
-- `dacl`
-- `tracl`
+- [`dacl`](../extension/decide/profile/dacl/README.md)
+- [`tracl`](../extension/decide/profile/tracl/README.md)
 
 ### see also
 
@@ -1206,7 +1228,11 @@ An [agent](#agent), providing resources, act in its [role](#role) [Provider](#Pr
 
 ### REL
 
-"Rights Expression Language" (**REL**) is a language to express [rights](#rights).
+"Rights Expression Language" ([**REL**](./shortcut.md#rel)) is a language to express [rights](#rights).
+
+### see
+
+- [ODRL](#odrl)
 
 #### see also
 
