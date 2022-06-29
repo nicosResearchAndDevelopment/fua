@@ -1,82 +1,81 @@
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix org:   <http://www.w3.org/ns/org#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix time:  <http://www.w3.org/2006/time#> .
-@prefix vann:  <http://purl.org/vocab/vann/> .
-@prefix voaf:  <http://purl.org/vocommons/voaf#> .
-@prefix void:  <http://rdfs.org/ns/void#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:              <http://purl.org/dc/terms/> .
+@prefix foaf:             <http://xmlns.com/foaf/0.1/> .
+@prefix odrl:             <http://www.w3.org/ns/odrl/2/> .
+@prefix org:              <http://www.w3.org/ns/org#> .
+@prefix owl:              <http://www.w3.org/2002/07/owl#> .
+@prefix prov:             <http://www.w3.org/ns/prov#> .
+@prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:             <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:             <http://www.w3.org/2006/time#> .
+@prefix vann:             <http://purl.org/vocab/vann/> .
+@prefix voaf:             <http://purl.org/vocommons/voaf#> .
+@prefix void:             <http://rdfs.org/ns/void#> .
+@prefix xsd:              <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix nrd:   <https://www.nicos-rd.com/> .
+@prefix nrd:              <https://www.nicos-rd.com/> .
 
-@prefix fua:   <https://github.com/nicosResearchAndDevelopment/fua#> .
-@prefix dave:  <https://www.nicos-rd.com/fua/dataverse#> .
-@prefix tuni:  <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix fua:              <https://github.com/nicosResearchAndDevelopment/fua#> .
+@prefix dave:             <https://www.nicos-rd.com/fua/dataverse#> .
+@prefix tuni:             <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix earth:            <https://www.nicos-rd.com/data/earth/> .
+@prefix individual:       <https://www.nicos-rd.com/data/earth/biol/individual#> .
+@prefix service-instance: <https://www.nicos-rd.com/data/earth/service/serviceinstance#> .
 
-@prefix agent: <https://github.com/nicosResearchAndDevelopment/fua/agent.md#> .
+@prefix agent:            <https://github.com/nicosResearchAndDevelopment/fua/agent.md#> .
 
-agent:JLA
-    a               foaf:Person ;
-    foaf:firstName  "Jörg" ;
-    foaf:familyName "Langkau" ;
-    owl:sameAs      <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
+individual:jla
+    a          foaf:Person ;
+    foaf:name  "Jörg Langkau"^^xsd:string ;
+    owl:sameAs <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
 .
 
-[ fua:agent agent:JLA ; rdfs:label "mail"@en ;     fua:private "false"^^xsd:boolean ; foaf:mbox "jlangkau@nicos-ag.com"^^owl:Thing ; ] .
+individual:tfhs
+    owl:sameAs individual:jla ;
+.
 
-[ fua:agent agent:JLA ; rdfs:label "GitHub" ;      fua:private "false"^^xsd:boolean ; foaf:homepage "https://github.com/jlangkau"^^foaf:Document ; ] .
+[ fua:agent individual:jla ; rdfs:label "mail"@en ;     fua:private "false"^^xsd:boolean ; foaf:mbox "jlangkau@nicos-ag.com"^^owl:Thing ; ] .
 
-[ fua:agent agent:JLA ; rdfs:label "GitLab" ;      fua:private "false"^^xsd:boolean ; foaf:homepage "https://gitlab.com/jottData"^^foaf:Document ; ] .
+[ fua:agent individual:jla ; rdfs:label "GitHub" ;      fua:private "false"^^xsd:boolean ; foaf:homepage "https://github.com/jlangkau"^^foaf:Document ; ] .
 
-[ fua:agent agent:JLA ; rdfs:label "twitter" ;     fua:private "false"^^xsd:boolean ; foaf:homepage "https://twitter.com/LostInDataSpace"^^foaf:Document ; ] .
+[ fua:agent individual:jla ; rdfs:label "GitLab" ;      fua:private "false"^^xsd:boolean ; foaf:homepage "https://gitlab.com/jottData"^^foaf:Document ; ] .
 
-[ fua:agent agent:JLA ; rdfs:label "solid (web)" ; fua:private "true"^^xsd:boolean ;  foaf:homepage "https://jottomat.solidweb.org/profile/card#me"^^foaf:Document ; ] .
+[ fua:agent individual:jla ; rdfs:label "twitter" ;     fua:private "false"^^xsd:boolean ; foaf:homepage "https://twitter.com/LostInDataSpace"^^foaf:Document ; ] .
 
-agent:Alice
+[ fua:agent individual:jla ; rdfs:label "solid (web)" ; fua:private "true"^^xsd:boolean ;  foaf:homepage "https://jottomat.solidweb.org/profile/card#me"^^foaf:Document ; ] .
+
+individual:42
     a          foaf:Agent ;
     owl:sameAs <https://github.com/nicosResearchAndDevelopment/fua/agent.md#alice>
 .
 
-agent:Bob
+individual:43
     a          foaf:Agent ;
     owl:sameAs <https://github.com/nicosResearchAndDevelopment/fua/agent.md#bob> ;
 .
 
-## region some times acting as a service Instance...
-
-agent:Alice
-    a                  dave:ServiceInstance ;
-    dave:dataActorRole dave:DATA_PROVIDER ;
-    rdfs:comment       """Most of the time acting as an agent with role 'Data Provider'."""@en ;
-.
-
-agent:Bob
-    a                  dave:ServiceInstance ;
-    dave:dataActorRole dave:DATA_CONSUMER ;
-    rdfs:comment       """Most of the time acting as an agent with role 'Data Consumer'."""@en ;
-.
-## endregion
-
 ## region some times acting as a person...
 
-agent:Alice
+individual:42
     a                foaf:Person ;
+    foaf:dnaChecksum "42"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "female"^^xsd:string ;
-    foaf:firstName   "Alice" ;
-    foaf:dnaChecksum "42"^^xsd:string ;
+    foaf:name        "Alice Example"^^xsd:string ;
+    foaf:made        individual:85 ;
+    foaf:knows       individual:43 ;
+    foaf:knows       individual:85 ;
+    owl:sameAs       <https://github.com/nicosResearchAndDevelopment/fua/agent.md#alice> ;
 .
 
-agent:Bob
+individual:43
     a                foaf:Person ;
+    foaf:dnaChecksum "43"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "male"^^xsd:string ;
-    foaf:firstName   "Bob" ;
-    foaf:dnaChecksum "43"^^xsd:string ;
+    foaf:name        "Bob Example"^^xsd:string ;
+    foaf:made        individual:85 ;
+    foaf:knows       individual:42 ;
+    foaf:knows       individual:85 ;
+    owl:sameAs       <https://github.com/nicosResearchAndDevelopment/fua/agent.md#bob> ;
 .
 
 ## region some times acting together...
@@ -84,43 +83,69 @@ agent:Bob
 ## REM: If you ever had asked yourself "IA: Does humor belongs to an ontology?" maybe you've answered
 ## REM:     it with "IA: YES!", after looking at this: <http://xmlns.com/foaf/spec/#term_dnaChecksum>
 
-agent:Alice
+individual:42
     a prov:Entity ;
 .
 
-agent:Bob
+individual:43
     a prov:Entity ;
 .
 
-agent:Charly
+individual:85
     a                    foaf:Person ;
     a                    prov:Entity ;
+    foaf:dnaChecksum     "85"^^xsd:string ; ## REM: used in given identifier
     foaf:gender          "male"^^xsd:string ;
-    foaf:firstName       "Charly" ;
-    foaf:dnaChecksum     "44"^^xsd:string ;
+    foaf:name            "Charly Example"^^xsd:string ;
     prov:wasGeneratedBy  [ a                      prov:Activity ;
                            prov:startedAtTime     "2022-06-22T19:00:00Z"^^xsd:dateTime ;
                            prov:endedAtTime       "2022-06-22T23:00:00Z"^^xsd:dateTime ;
-                           prov:wasAssociatedWith agent:Alice ;
-                           prov:wasAssociatedWith agent:Bob ;
-                           prov:used              agent:Alice ;
-                           prov:used              agent:Bob ; ] ;
-    prov:wasAttributedTo agent:Alice ;
-    prov:wasAttributedTo agent:Bob ;
+                           prov:wasAssociatedWith individual:42 ;
+                           prov:wasAssociatedWith individual:43 ;
+                           prov:used              individual:42 ;
+                           prov:used              individual:43 ; ] ;
+    prov:wasAttributedTo individual:42 ;
+    prov:wasAttributedTo individual:43 ;
     foaf:birthday        "2023-03-11T04:42:42Z"^^xsd:dateTime ;
+    foaf:maker           individual:42 ;
+    foaf:maker           individual:43 ;
+    foaf:knows           individual:42 ;
+    foaf:knows           individual:43 ;
+    rdfs:isDefinedBy     individual:42 ;
+    rdfs:isDefinedBy     individual:43 ;
     owl:sameAs           <https://github.com/nicosResearchAndDevelopment/fua/agent.md#charly> ;
-    rdfs:isDefinedBy     agent:Alice ;
-    rdfs:isDefinedBy     agent:Bob ;
-.
-
-agent:Charly
-    a                  dave:ServiceInstance ;
-    dave:dataActorRole dave:UNSPECIFIC ;
-    rdfs:comment       """Acting agent has NOT role 'dave:DATA_CONSUMER' or 'dave:DATA_PROVIDER'."""@en ;
 .
 
 ## endregion ...some times acting together
 
 ## endregion ...some times acting as a person
+
+## region some times acting as a service Instance...
+
+service-instance:s-42
+    a                  dave:ServiceInstance ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:DATA_PROVIDER ;
+    rdfs:comment       """Most of the time acting as an agent with role 'Data Provider'."""@en ;
+.
+
+service-instance:s-43
+    a                  dave:ServiceInstance ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:DATA_CONSUMER ;
+    rdfs:comment       """Most of the time acting as an agent with role 'Data Consumer'."""@en ;
+.
+
+service-instance:s-85
+    a                  dave:ServiceInstance ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:UNSPECIFIC ;
+    rdfs:comment       """Acting agent has NOT role 'dave:DATA_CONSUMER' or 'dave:DATA_PROVIDER'."""@en ;
+    ## REM: is defined by Alice and Bob as a 'foaf:Person'. They spend Charly a Service Instance. See: <fua/agent.ttl>
+    rdfs:isDefinedBy   individual:42 ; ## REM: Alice
+    rdfs:isDefinedBy   individual:43 ; ## REM: Bob
+.
+
+## endregion ...some times acting as a service Instance
 
 ## EOF

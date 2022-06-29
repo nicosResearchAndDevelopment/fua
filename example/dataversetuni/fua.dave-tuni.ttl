@@ -1,48 +1,118 @@
-@prefix dct:  <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix org:  <http://www.w3.org/ns/org#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:              <http://purl.org/dc/terms/> .
+@prefix foaf:             <http://xmlns.com/foaf/0.1/> .
+@prefix org:              <http://www.w3.org/ns/org#> .
+@prefix owl:              <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:             <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:             <http://www.w3.org/2006/time#> .
+@prefix vann:             <http://purl.org/vocab/vann/> .
+@prefix voaf:             <http://purl.org/vocommons/voaf#> .
+@prefix void:             <http://rdfs.org/ns/void#> .
+@prefix xsd:              <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix nrd:  <https://www.nicos-rd.com/> .
+@prefix nrd:              <https://www.nicos-rd.com/> .
 
-@prefix fua:  <https://www.nicos-rd.com/fua#> .
-@prefix narr: <https://www.nicos-rd.com/fua/narration#> .
-@prefix univ: <https://www.nicos-rd.com/fua/universe#> .
+@prefix fua:              <https://www.nicos-rd.com/fua#> .
+@prefix narr:             <https://www.nicos-rd.com/fua/narration#> .
+@prefix univ:             <https://www.nicos-rd.com/fua/universe#> .
 
-@prefix dbc:  <http://dbpedia.org/resource/Category:> .
-@prefix dbr:  <https://dbpedia.org/resource/> .
-@prefix dbo:  <https://dbpedia.org/ontology/> .
+@prefix dbc:              <http://dbpedia.org/resource/Category:> .
+@prefix dbr:              <https://dbpedia.org/resource/> .
+@prefix dbo:              <https://dbpedia.org/ontology/> .
 
-@prefix puni: <https://www.nicos-rd.com/data/paralleluniverse/> .
-@prefix tuni: <https://www.nicos-rd.com/data/theuniverse/> .
-@prefix earth: <https://www.nicos-rd.com/data/theuniverse/Earth/> .
+@prefix puni:             <https://www.nicos-rd.com/data/paralleluniverse/> .
+@prefix tuni:             <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix earth:            <https://www.nicos-rd.com/data/earth/> .
+@prefix individual:       <https://www.nicos-rd.com/data/earth/biol/individual#> .
+@prefix service-instance: <https://www.nicos-rd.com/data/earth/service/serviceinstance#> .
 
-@prefix dave: <https://www.nicos-rd.com/fua/dataverse#> .
+@prefix dave:             <https://www.nicos-rd.com/fua/dataverse#> .
+
+@prefix ids-ec:           <https://www.internationaldataspacesassotiation.org/ecosystem/> .
+@prefix gax-ec:           <https://www.gaia-x.eu/ecosystem/> .
+@prefix meve-ec:          <https://www.nicos-rd.com/fua/metaverse/> .
+
 
 tuni:
     a              univ:Universe ;
     a              dave:DataVerse ;
     a              dave:EcoSystem ;
     dave:ecoSystem tuni: ;
-    dave:ecoSystem tuni:Earth ;
+    dave:ecoSystem earth: ;
     dave:ecoSystem puni: ;
 .
 
 earth:
-    a              dbo:Planet ;
-    a              dave:DataVerse ;
-    a              dave:EcoSystem ;
-    dave:ecoSystem tuni:Earth ;
-    dave:ecoSystem <http://www.internationaldataspaces.org> ;
+    a                    dbo:Planet ;
+    a                    dave:DataVerse ;
+    a                    dave:EcoSystem ;
+    ## region dave:ecoSystem
+    dave:ecoSystem       earth: ;
+    dave:ecoSystem       ids-ec: ;
+    dave:ecoSystem       gax-ec: ;
+    dave:ecoSystem       meve-ec: ;
+    ## endregion dave:ecoSystem
+    ## region dave:serviceInstance
+    ## REM: dave:serviceInstance :: a collection of all (known) Service Instances of all Eco Systems
+    dave:serviceInstance service-instance:s-42 ; ## REM: Alice, coming from 'earth:'
+    dave:serviceInstance service-instance:s-43 ; ## REM: Bob, coming from 'earth:'
+    dave:serviceInstance service-instance:s-85 ; ## REM: Charly, coming from 'earth:'
+    ## endregion dave:serviceInstance
 .
+
+## region Eco System
+## region Eco System :: IDS
+ids-ec:
+    a dave:EcoSystem ;
+.
+## endregion Eco System :: IDS
+## region Eco System :: GAIA-X
+gax-ec:
+    a dave:EcoSystem ;
+.
+## endregion Eco System :: GAIA-X
+## region Eco System :: MetaVerse
+meve-ec:
+    a                    dave:EcoSystem ;
+    ## region dave:serviceInstance
+    ## REM: dave:serviceInstance :: a collection of all (known) Service Instances of given Eco Systems
+    dave:serviceInstance service-instance:s-42 ; ## REM: Alice
+    dave:serviceInstance service-instance:s-43 ; ## REM: Bob
+    dave:serviceInstance service-instance:s-85 ; ## REM: Charly
+    ## endregion dave:serviceInstance
+.
+
+service-instance:s-42
+    a                  dave:ServiceInstance ;
+    rdfs:label         "Service Instance 'Alice'"^^xsd:string ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:DATA_PROVIDER ;
+    ## REM: is defined by Alice as a 'foaf:Person'. See: <fua/agent.ttl>
+    rdfs:isDefinedBy   individual:42 ;
+.
+
+service-instance:s-43
+    a                  dave:ServiceInstance ;
+    rdfs:label         "Service Instance 'Bob'"^^xsd:string ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:DATA_CONSUMER ;
+    ## REM: is defined by Bob as a 'foaf:Person'. See: <fua/agent.ttl>
+    rdfs:isDefinedBy   individual:42 ;
+.
+
+service-instance:s-85
+    a                  dave:ServiceInstance ;
+    rdfs:label         "Service Instance 'Charly'"^^xsd:string ;
+    dave:serviceModel  [ ] ;
+    dave:dataAgentRole dave:UNSPECIFIC ;
+    ## REM: is defined by Alice and Bob as a 'foaf:Person'. They spend Charly a Service Instance. See: <fua/agent.ttl>
+    rdfs:isDefinedBy   individual:42 ; ## REM: Alice
+    rdfs:isDefinedBy   individual:43 ; ## REM: Bob
+.
+
+## endregion Eco System :: MetaVerse
+## endregion Eco System
 
 puni:
     a              univ:Universe ;
@@ -56,11 +126,18 @@ tuni:MultiVerse
     a              univ:MultiVerse ;
     a              dave:DataVerse ;
     # REM: it is **NOT** an Eco System ('dave:EcoSystem')! So far...
+    ## region dave:dataVerse
+    ## REM: all universes stating to be are a 'dave:DataVerse' in given 'tuni:MultiVerse' are shown here...
     dave:dataVerse tuni: ;
-    dave:dataVerse earth: ;
+    ## REM: dave:dataVerse earth: ; ... so, provided by 'tuni:'
     dave:dataVerse puni: ;
+    ## endregion dave:dataVerse
+    ## region dave:ecoSystem
+    ## REM: all universes stating to be a 'dave:EcoSystem' in given 'tuni:MultiVerse' are shown here...
     dave:ecoSystem tuni: ;
+    ## REM: dave:ecoSystem earth: ; ... so, provided by 'tuni:'
     dave:ecoSystem puni: ;
+    ## endregion dave:ecoSystem
 .
 
 ## EOF fua.dave-tuni.ttl

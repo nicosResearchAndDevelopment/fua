@@ -1,0 +1,230 @@
+@base <http://www.w3.org/ns/odrl/2/> .
+@prefix :               <http://www.w3.org/ns/odrl/2/> .
+@prefix odrl:           <http://www.w3.org/ns/odrl/2/> .
+@prefix cc:             <http://creativecommons.org/ns#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix odrl:           <http://www.w3.org/ns/odrl/2/> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+## ^
+## TODO: check, if necessary!!!
+
+@prefix profile:        <https://www.nicos-rd.com/fua/odrl/profile/ftime/> .
+@prefix ftime:          <https://www.nicos-rd.com/fua/odrl/profile/ftime/extension/0-0-1/> .
+
+profile:
+    a               owl:Ontology ;
+    rdfs:label      "ODRL Profile 'ftime'"@en ;
+    rdfs:label      "ODRL Profil 'ftime'"@de ;
+    owl:versionInfo "0.0.1" ;
+    dct:creator     "Jörg Langkau" ;
+#    dct:contributor "" ;
+    dct:description """"The ODRL Profile 'ftime'"."""@en ;
+    dct:license     <http://creativecommons.org/licenses/by/4.0/> ;
+.
+
+#<https://www.nicos-rd.com/fua/odrl/profile/ftime/extension/0-0-1/>
+ftime:
+    a              skos:Collection ;
+    skos:prefLabel "ODRL Profile 'ftime' Vocabulary"@en ;
+    skos:scopeNote "All terms of the ODRL Profile 'ftime'"@en ;
+    ## region member
+    ## region member :: odrl
+    ## REM: all members below (member :: odrl) are from the ODRL Common Vocabulary, a specification exists
+    skos:member    :dateTime ;
+    ## endregion member :: odrl
+    ## region member :: extension
+    ## region member :: extension :: leftOperand
+    skos:member    ftime:tomorrow ;
+    skos:member    ftime:yesterday ;
+    skos:member    ftime:nextYear ;
+    skos:member    ftime:lastYear ;
+    ## endregion member :: extension :: leftOperand
+    ## region member :: extension :: action
+    skos:member    ftime:before ;
+    skos:member    ftime:after ;
+    skos:member    ftime:meets ;
+    skos:member    ftime:metBy ;
+    skos:member    ftime:overlaps ;
+    skos:member    ftime:overlappedBy ;
+    skos:member    ftime:starts ;
+    skos:member    ftime:startedBy ;
+    skos:member    ftime:during ;
+    skos:member    ftime:contains ;
+    skos:member    ftime:finishes ;
+    skos:member    ftime:finishedBy ;
+    skos:member    ftime:equals ;
+    skos:member    ftime:in ;
+    skos:member    ftime:disjoint ;
+    ## endregion member :: extension :: action
+    ## endregion member :: extension
+    ## endregion member
+.
+
+## region extension
+## region extension :: leftOperand
+ftime:tomorrow
+    a                :LeftOperand, owl:NamedIndividual, skos:Concept ;
+    rdfs:isDefinedBy profile: ;
+    rdfs:label       "Tomorrow"@en ;
+    rdfs:label       "Morgen"@en ;
+    skos:definition  """."""@en ;
+    skos:note        "" ;
+    skos:scopeNote   "Non-Normative"@en ;
+.
+
+ftime:yesterday
+    a                :LeftOperand, owl:NamedIndividual, skos:Concept ;
+    rdfs:isDefinedBy profile: ;
+    rdfs:label       "Yesterday"@en ;
+    rdfs:label       "Gestern"@en ;
+    skos:definition  """."""@en ;
+    skos:note        "" ;
+    skos:scopeNote   "Non-Normative"@en ;
+.
+
+ftime:nextYear
+    a                :LeftOperand, owl:NamedIndividual, skos:Concept ;
+    rdfs:isDefinedBy profile: ;
+    rdfs:label       "Next Year"@en ;
+    rdfs:label       "Folgejahr"@en ;
+    skos:definition  """."""@en ;
+    skos:note        "" ;
+    skos:scopeNote   "Non-Normative"@en ;
+.
+
+ftime:nextYear
+    a                :LeftOperand, owl:NamedIndividual, skos:Concept ;
+    rdfs:isDefinedBy profile: ;
+    rdfs:label       "Next Year"@en ;
+    rdfs:label       "Nächstes Jahr"@en ;
+    skos:definition  """."""@en ;
+    skos:note        "" ;
+    skos:scopeNote   "Non-Normative"@en ;
+.
+
+ftime:lastYear
+    a                :LeftOperand, owl:NamedIndividual, skos:Concept ;
+    rdfs:isDefinedBy profile: ;
+    rdfs:label       "Last Year"@en ;
+    rdfs:label       "Letztes Jahr"@en ;
+    skos:definition  """."""@en ;
+    skos:note        "" ;
+    skos:scopeNote   "Non-Normative"@en ;
+.
+## endregion extension :: leftOperand
+## region extension :: action
+
+ftime:before
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Before"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:after
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "After"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+
+ftime:meets
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Meets"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:metBy
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Met By"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:overlaps
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Overlaps"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:overlappedBy
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Overlapped By"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:starts
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Starts"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:startedBy
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Started By"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:during
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "During"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:contains
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Contains"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:finishes
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Finishes"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:finishedBy
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Finished By"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:equals
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Equals"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:in
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "in"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+
+ftime:disjoint
+    a                :Operator, owl:NamedIndividual, skos:Concept ;
+    rdfs:label       "Disjoint"@en ;
+    skos:definition  """."""@en ;
+    rdfs:isDefinedBy profile: ;
+.
+## endregion extension :: action
+## endregion extension
+
+## EOF fua.ftime.ttl

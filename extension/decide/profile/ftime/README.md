@@ -1,4 +1,6 @@
-# Decide Profile "time"
+# Decide ODRL Profile "ftime"
+
+- preferred namespace prefix `ftime`.
 
 The following is the starting point to understand how `fua` brings some aspects of time related questions into
 constraints (under rules, under policies).
@@ -56,7 +58,7 @@ Intervals can be expressed in three different ways:
 - time instant, duration
 - duration, time instant
 
-Intervals are represented in given psoudocode as an array of two strings.
+Intervals are represented in given pseudocode as an array of two strings.
 
 The following example expresses the identical interval (with
 duration of one day) in three ways:
@@ -67,7 +69,7 @@ duration of one day) in three ways:
 [ "P1D",                  "2019-04-02T00:00:00Z" ]
 ```
 
-### A Interval
+### An Interval
 
 A period of time (here: one day)
 
@@ -97,16 +99,16 @@ The beginning of a proper interval **MUST** be placed before the end of it. So i
 
 ## Binary Operators
 
-### time:Before
+### ftime:before
 
 ###### Example
 
-A `time:Instant` is `before` a `time:Interval`.
+A `time:Instant` is `ftime:before` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Before( "2019-01-05T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z"]) = true
+Before( "2019-01-05T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z"]) ===== true
 ```
 
 ###### ODRL
@@ -131,7 +133,7 @@ Before( "2019-01-05T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z"
                         }
                     }
                },
-               "operator": "time:Before",
+               "operator": "ftime:before",
                "rightOperand":  {
                     "@type": "time:Interval",
                     "time:hasBeginning": {
@@ -155,23 +157,23 @@ Before( "2019-01-05T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z"
 
 ---
 
-### time:After
+### ftime:after
 
 ###### Example
 
-A `time:Instant` is `after` a `time:Interval`.
+A `time:Instant` is `ftime:after` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-After( "2019-04-01T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) = true
+After( "2019-04-01T00:00:00Z", [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) === true
 ```
 
-| time:TemporalEntity  |                 | time:TemporalEntity             | is     |
-| :--- | --- | :--- | :--- |
-| "2019-04-01T00:00:00Z" | `After`     | [ "2019-02-01T00:00:00Z", "P1M" ] | true   |
+| time:TemporalEntity  |               | time:TemporalEntity               | is    |
+|:---|---------------|:----------------------------------|:------|
+| "2019-04-01T00:00:00Z" | `ftime:after` | [ "2019-02-01T00:00:00Z", "P1M" ] | true  |
 
-### time:Meets
+### ftime:Meets
 
 ###### Example
 
@@ -180,159 +182,159 @@ A `time:Interval` `meets` a `time:Interval`.
 ###### pseudocode
 
 ```pseudocode
-Meets( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) = true
+Meets( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) === true
 ```
 
-### time:MetBy
+### ftime:MetBy
 
 ###### Example
 
-A `time:Interval` is `metBy` a `time:Interval`.
+A `time:Interval` is `ftime:metBy` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-MetBy( [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) = true
+MetBy( [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) === true
 ```
 
-### time:Overlaps
+### ftime:overlaps
 
 ###### Example
 
-A `time:Interval` `overlaps` a `time:Interval`.
+A `time:Interval` `ftime:overlaps` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Overlaps( [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-02-01T00:00:00Z", "2019-04-01T00:00:00Z" ]) = true
+Overlaps( [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-02-01T00:00:00Z", "2019-04-01T00:00:00Z" ]) === true
 ```
 
-### time:OverlappedBy
+### ftime:overlappedBy
 
 ###### Example
 
-A `time:Interval` is `overlappedBy` a `time:Interval`.
+A `time:Interval` is `ftime:overlappedBy` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Overlaps([ "2019-02-01T00:00:00Z", "2019-04-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) = true
+Overlaps([ "2019-02-01T00:00:00Z", "2019-04-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) === true
 ```
 
-### time:Starts
+### ftime:starts
 
 ###### Example
 
-A `time:Instant` `starts` a `time:Interval`.
+A `time:Instant` `ftime:starts` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Starts( "2019-01-01T00:00:00Z", [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) = true
+Starts( "2019-01-01T00:00:00Z", [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) === true
 ```
 
-### time:StartedBy
+### ftime:startedBy
 
 ###### Example
 
-A `time:Interval` is `startedBy` a `time:Instant`.
+A `time:Interval` is `ftime:startedBy` a `time:Instant`.
 
 ###### pseudocode
 
 ```pseudocode
-Starts([ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], "2019-01-01T00:00:00Z" ) = true
+Starts([ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], "2019-01-01T00:00:00Z" ) === true
 ```
 
-### time:During
+### ftime:during
 
 ###### Example
 
-A `time:Interval` is `during` a `time:Interval`.
+A `time:Interval` is `ftime:during` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-During( [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-04-01T00:00:00Z" ] ) = true
+During( [ "2019-02-01T00:00:00Z", "2019-03-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-04-01T00:00:00Z" ] ) === true
 ```
 
-### time:Contains
+### ftime:contains
 
 ###### Example
 
-A `time:Interval` `contains` a `time:Instant`.
+A `time:Interval` `fcontains` a `time:Instant`.
 
 ###### pseudocode
 
 ```pseudocode
-Contains( [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ], "2019-02-01T00:00:00Z" ) = true
+Contains( [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ], "2019-02-01T00:00:00Z" ) === true
 ```
 
-### time:Finishes
+### ftime:finishes
 
 ###### Example
 
-A `time:Instant` `finishes` a `time:Interval`.
+A `time:Instant` `ftime:finishes` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Finishes( "2019-02-01T00:00:00Z", [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) = true
+Finishes( "2019-02-01T00:00:00Z", [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ]) === true
 ```
 
-### time:FinishedBy
+### ftime:finishedBy
 
 ###### Example
 
-A `time:Interval` is `finishedBy` a `time:Instant`.
+A `time:Interval` is `ftime:finishedBy` a `time:Instant`.
 
 ###### pseudocode
 
 ```pseudocode
-Finishes([ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], "2019-02-01T00:00:00Z" ) = true
+Finishes([ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], "2019-02-01T00:00:00Z" ) === true
 ```
 
-### time:Equals
+### ftime:equals
 
 ##### Example
 
-A `time:Instant` `equal`s a `time:Instant`.
+A `time:Instant` `ftime:equals` a `time:Instant`.
 
 ###### pseudocode
 
 ```pseudocode
-Equals("2019-04-01T00:00:00Z", "2019-04-01T00:00:00Z") = true
+Equals("2019-04-01T00:00:00Z", "2019-04-01T00:00:00Z") === true
 ```
 
 | time:TemporalEntity  |   | time:TemporalEntity | is |  
 |:---|---|:---|:---|
 | "2019-04-01T00:00:00Z" | `Equals`     | "2019-04-01T00:00:00Z" | true   |
 
-### time:In
+### ftime:in
 
 ###### Example
 
-A `time:Interval` is `in` a `time:Interval`.
+A `time:Interval` is `ftime:in` a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Finishes( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) = true
+Finishes( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-01-01T00:00:00Z", "2019-03-01T00:00:00Z" ]) === true
 ```
 
-### time:Disjoint
+### ftime:disjoint
 
 ###### Example
 
-A `time:Interval` is `disjoint` with a `time:Interval`.
+A `time:Interval` is `ftime:disjoint` with a `time:Interval`.
 
 ###### pseudocode
 
 ```pseudocode
-Finishes( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-03-01T00:00:00Z", "2019-04-01T00:00:00Z" ]) = true
+Finishes( [ "2019-01-01T00:00:00Z", "2019-02-01T00:00:00Z" ], [ "2019-03-01T00:00:00Z", "2019-04-01T00:00:00Z" ]) === true
 ```
 
 ---
 
-```#time, #control-language, #control```
+```#ftime, #time, #control-language, #control```
 
 ---

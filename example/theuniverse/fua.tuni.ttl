@@ -1,28 +1,31 @@
-@prefix dct:  <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix org:  <http://www.w3.org/ns/org#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:        <http://purl.org/dc/terms/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix ldp:        <http://www.w3.org/ns/ldp#> .
+@prefix org:        <http://www.w3.org/ns/org#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:       <http://www.w3.org/2006/time#> .
+@prefix vann:       <http://purl.org/vocab/vann/> .
+@prefix voaf:       <http://purl.org/vocommons/voaf#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix nrd:  <https://www.nicos-rd.com/> .
+@prefix nrd:        <https://www.nicos-rd.com/> .
 
-@prefix fua:  <https://www.nicos-rd.com/fua#> .
-@prefix narr: <https://www.nicos-rd.com/fua/narration#> .
-@prefix univ: <https://www.nicos-rd.com/fua/universe#> .
+@prefix fua:        <https://www.nicos-rd.com/fua#> .
+@prefix narr:       <https://www.nicos-rd.com/fua/narration#> .
+@prefix univ:       <https://www.nicos-rd.com/fua/universe#> .
 
-@prefix dbc:  <http://dbpedia.org/resource/Category:> .
-@prefix dbr:  <https://dbpedia.org/resource/> .
-@prefix dbo:  <https://dbpedia.org/ontology/> .
+@prefix dbc:        <http://dbpedia.org/resource/Category:> .
+@prefix dbr:        <https://dbpedia.org/resource/> .
+@prefix dbo:        <https://dbpedia.org/ontology/> .
 
-@prefix puni: <https://www.nicos-rd.com/data/paralleluniverse/> .
-@prefix tuni: <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix puni:       <https://www.nicos-rd.com/data/paralleluniverse/> .
+@prefix tuni:       <https://www.nicos-rd.com/data/theuniverse/> .
+@prefix earth:      <https://www.nicos-rd.com/data/theuniverse/earth/> .
+@prefix individual: <https://www.nicos-rd.com/data/theuniverse/earth/biol/individual#> .
 
 tuni:
     a                             univ:Universe ;
@@ -45,7 +48,7 @@ tuni:SolarSystem
     a                univ:PlanetarySystem ;
     rdfs:label       "Solar System"@en ;
     univ:star        tuni:Sun ;
-    univ:planet      tuni:Earth ;
+    univ:planet      earth: ;
     rdfs:isDefinedBy tuni: ;
 .
 
@@ -58,11 +61,54 @@ tuni:Sun
     rdfs:isDefinedBy tuni: ;
 .
 
-tuni:Earth
+earth:
     a                dbo:Planet ;
     rdfs:label       "Earth"@en ;
     owl:sameAs       dbr:Earth ;
     rdfs:isDefinedBy tuni: ;
+.
+
+individual:
+    a                ldp:Container ;
+    rdfs:label       "Individual"@en ;
+    ldp:contains     individual:jla ;
+    ldp:contains     individual:42 ;
+    ldp:contains     individual:43 ;
+    ldp:contains     individual:85 ;
+    rdfs:isDefinedBy earth: ;
+.
+
+individual:jla
+    a               ldp:Resource ;
+    a               foaf:Agent ;
+    foaf:firstName  "Jörg" ;
+    foaf:familyName "Langkau" ;
+    foaf:nick       "jott"^^xsd:string ;
+    rdfs:comment    """Jörg Langkau"""@en ;
+.
+
+individual:42
+    a               ldp:Resource ;
+    a               foaf:Agent ;
+    foaf:givenName  "Alice"^^xsd:string ;
+    foaf:familyName "Example"^^xsd:string ;
+    rdfs:comment    """Alice"""@en ;
+.
+
+individual:43
+    a               ldp:Resource ;
+    a               foaf:Agent ;
+    foaf:givenName  "Bob"^^xsd:string ;
+    foaf:familyName "Example"^^xsd:string ;
+    rdfs:comment    """Bob"""@en ;
+.
+
+individual:85
+    a               ldp:Resource ;
+    a               foaf:Agent ;
+    foaf:givenName  "Charly"^^xsd:string ;
+    foaf:familyName "Example"^^xsd:string ;
+    rdfs:comment    """Charly"""@en ;
 .
 
 ## region Parallel Universe
@@ -82,8 +128,10 @@ puni:
 tuni:MultiVerse
     a                univ:MultiVerse ;
     rdfs:label       "The MultiVerse"@en ;
+    ## region univ:universe
     univ:universe    tuni: ;
     univ:universe    puni: ;
+    ## endregion univ:universe
     rdfs:comment     """Yes, MultiVerse is defined by 'tuni:'. Someone has to do this job... And: 'tuni:' discovers 'puni:' - and not the other way around..."""@en ;
     rdfs:isDefinedBy tuni: ;
 .
