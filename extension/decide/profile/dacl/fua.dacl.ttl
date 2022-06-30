@@ -1,22 +1,27 @@
 @base <http://www.w3.org/ns/odrl/2/> .
-@prefix :               <http://www.w3.org/ns/odrl/2/> .
-@prefix odrl:           <http://www.w3.org/ns/odrl/2/> .
-@prefix cc:             <http://creativecommons.org/ns#> .
-@prefix dct:            <http://purl.org/dc/terms/> .
-@prefix odrl:           <http://www.w3.org/ns/odrl/2/> .
-@prefix owl:            <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema:         <http://schema.org/> .
-@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix :                 <http://www.w3.org/ns/odrl/2/> .
+@prefix odrl:             <http://www.w3.org/ns/odrl/2/> .
+
+@prefix cc:               <http://creativecommons.org/ns#> .
+@prefix dct:              <http://purl.org/dc/terms/> .
+@prefix foaf:             <http://xmlns.com/foaf/0.1/> .
+@prefix odrl:             <http://www.w3.org/ns/odrl/2/> .
+@prefix owl:              <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:           <http://schema.org/> .
+@prefix skos:             <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:              <http://www.w3.org/2001/XMLSchema#> .
 ## ^
 ## ^
 ## ^
 ## TODO: check, what is necessary!!!
 
-@prefix profile:        <https://www.nicos-rd.com/fua/odrl/profile/dacl/> .
-@prefix dacl:           <https://www.nicos-rd.com/fua/odrl/profile/dacl/extension/0-0-1/> .
+@prefix acl:              <http://www.w3.org/ns/auth/acl#> .
+## TBC: is this really used? :: @prefix vcard:            <http://www.w3.org/2006/vcard/ns#> .
+
+@prefix profile:          <https://www.nicos-rd.com/fua/odrl/profile/dacl/> .
+@prefix dacl:             <https://www.nicos-rd.com/fua/odrl/profile/dacl/extension/0-0-1/> .
 
 profile:
     a               owl:Ontology ;
@@ -198,55 +203,78 @@ dacl:REMOVE
 ## region individual
 
 dacl:THERULE
-    a                dacl:Allow ;
-    :target          [ a           :AssetCollection ;
+    a       dacl:Allow ;
+    :target [ a           :AssetCollection ;
 #                       :source     <> ; ## REM: send a acl-list
-                       :source     [ ] ;
-                       :refinement [ a         odrl:LogicalConstraint ;
-                                     odrl:xone [ a        odrl:LogicalConstraint ;
-                                                 odrl:and [ a       odrl:LogicalConstraint ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:CREATE ; ] ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:PUT ; ] ; ] ; ] ;
-                                     odrl:xone [ a        odrl:LogicalConstraint ;
-                                                 odrl:and [ a       odrl:LogicalConstraint ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:READ ; ] ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:GET ; ] ; ] ; ] ;
-                                     odrl:xone [ a        odrl:LogicalConstraint ;
-                                                 odrl:and [ a       odrl:LogicalConstraint ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:UPDATE ; ] ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:WRITE ; ] ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:MODIFY ; ] ; ] ; ] ;
-                                     odrl:xone [ a        odrl:LogicalConstraint ;
-                                                 odrl:and [ a       odrl:LogicalConstraint ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:DELETE ; ] ;
-                                                            odrl:or [ a             odrl:Constraint ;
-                                                                      :leftOperand  dacl:method ;
-                                                                      :operator     :eq ;
-                                                                      :rightOperand dacl:REMOVE ; ] ; ] ; ] ; ] ; ] ;
+        # :source "registry/getACL?id=abc
+              :source     [ ] ;
+## region EXAMPLE
+# [ acl:accessTo <abc>; acl:mode acl:Read; acl:agentClass foaf:Agent] ,
+# [ acl:accessTo <abc>; acl:mode acl:Read, acl:Write;  acl:agent <https://www.nicos-rd.com/data/earth/biol/individual#jla>] ;
+# [ acl:accessTo <abc>; acl:mode acl:Read, acl:Write;  acl:agentClass <https://www.nicos-rd.com/domain/group#admin>].
+## endregion
+              :refinement [ a         odrl:LogicalConstraint ;
+                            odrl:xone [ a        odrl:LogicalConstraint ;
+                                        odrl:and [ a       odrl:LogicalConstraint ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:method ;
+                                                             :operator     :eq ;
+                                                             :rightOperand dacl:CREATE ; ] ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:method ;
+                                                             :operator     :eq ;
+                                                             :rightOperand dacl:PUT ; ] ; ] ; ] ;
+                            odrl:xone [ a        odrl:LogicalConstraint ;
+                                        odrl:and [ a       odrl:LogicalConstraint ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:method ;
+                                                             :operator     :eq ;
+                                                             :rightOperand dacl:READ ; ] ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:method ;
+                                                             :operator     :eq ;
+                                                             :rightOperand dacl:GET ; ] ; ] ;
+                                        odrl:and [ a       odrl:LogicalConstraint ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  acl:mode ;
+                                                             :operator     :eq ;
+                                                             :rightOperand acl:Read ; ] ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:USER ; ## TODO:
+                                                             :operator     dacl:hasClass ;
+                                                             :rightOperand acl:agentClass ; ] ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:USER ; ## TODO:
+                                                             :operator     :isPartOf ;
+                                                             :rightOperand acl:agent ; ] ;
+                                                   odrl:or [ a             odrl:Constraint ;
+                                                             :leftOperand  dacl:USER ; ## TODO:
+                                                             :operator     dacl:memberOf ;
+                                                             :rightOperand acl:agentClass ; ] ; ] ; ] ; ] ;
+              odrl:xone   [ a        odrl:LogicalConstraint ;
+                            odrl:and [ a       odrl:LogicalConstraint ;
+                                       odrl:or [ a             odrl:Constraint ;
+                                                 :leftOperand  dacl:method ;
+                                                 :operator     :eq ;
+                                                 :rightOperand dacl:UPDATE ; ] ;
+                                       odrl:or [ a             odrl:Constraint ;
+                                                 :leftOperand  dacl:method ;
+                                                 :operator     :eq ;
+                                                 :rightOperand dacl:WRITE ; ] ;
+                                       odrl:or [ a             odrl:Constraint ;
+                                                 :leftOperand  dacl:method ;
+                                                 :operator     :eq ;
+                                                 :rightOperand dacl:MODIFY ; ] ; ] ; ] ;
+              odrl:xone   [ a        odrl:LogicalConstraint ;
+                            odrl:and [ a       odrl:LogicalConstraint ;
+                                       odrl:or [ a             odrl:Constraint ;
+                                                 :leftOperand  dacl:method ;
+                                                 :operator     :eq ;
+                                                 :rightOperand dacl:DELETE ; ] ;
+                                       odrl:or [ a             odrl:Constraint ;
+                                                 :leftOperand  dacl:method ;
+                                                 :operator     :eq ;
+                                                 :rightOperand dacl:REMOVE ; ] ; ] ; ] ; ] ; ] ;
 #    odrl:constraint   [] ;
     odrl:action      :use ;
     rdfs:isDefinedBy profile: ;

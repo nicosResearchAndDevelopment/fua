@@ -4,6 +4,7 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 
 | shortcut        | Description                        | Comment                    |
 |-----------------|:-----------------------------------|----------------------------|
+| [ACL](#acl)     | Access Control List             |                            |
 | [ATS](#ats)     | Authentication Service             |                            |
 | [AOS](#aos)     | Authorization Service              |                            |
 | [AU](#au)       | Authority                          |                            |
@@ -35,6 +36,14 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 | [TRACL](#tracl) | Transformation Control Language    |                            |
 
 _Table: `fua` shortcuts_.
+
+## ACL
+
+"Access Control List".
+
+[ACL](./README.md#acl).
+
+---
 
 ## ATS
 

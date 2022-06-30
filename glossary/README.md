@@ -27,6 +27,34 @@ The [glossary](./README.md) acts as a gate to further [information](#information
 
 ---
 
+### Access Control List
+
+"Access Control List" [(**ACL**)](./shortcut.md#acl).
+
+#### see
+
+- [ACL](#acl)
+
+```#access-control-list, #acl, #access-control, #control```
+
+---
+
+### ACL
+
+[(**ACL**, shortcut)](./shortcut.md#acl), "Access Control List".
+
+#### see
+
+- [`dacl` (Dynamic Access Control Language)](../extension/decide/profile/dacl/README.md)
+
+#### see also
+
+- [Web Access Control, latest version, solidproject](https://solidproject.org/TR/wac)
+
+```#acl, #access-control-list, #access-control, #control, #solid```
+
+---
+
 ### Action
 
 An "Action" is **NOT** interruptible and **MAY** contain a [timestamp](#timestamp).
