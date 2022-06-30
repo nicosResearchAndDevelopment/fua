@@ -64,6 +64,7 @@ tuni:Sun
 earth:
     a                dbo:Planet ;
     rdfs:label       "Earth"@en ;
+    rdfs:label       "Erde"@de ;
     owl:sameAs       dbr:Earth ;
     rdfs:isDefinedBy tuni: ;
 .
@@ -80,7 +81,7 @@ individual:
 
 individual:jla
     a               ldp:Resource ;
-    a               foaf:Agent ;
+    a               foaf:Person ;
     foaf:firstName  "Jörg" ;
     foaf:familyName "Langkau" ;
     foaf:nick       "jott"^^xsd:string ;
@@ -89,7 +90,7 @@ individual:jla
 
 individual:42
     a               ldp:Resource ;
-    a               foaf:Agent ;
+    a               foaf:Person ;
     foaf:givenName  "Alice"^^xsd:string ;
     foaf:familyName "Example"^^xsd:string ;
     rdfs:comment    """Alice"""@en ;
@@ -97,7 +98,7 @@ individual:42
 
 individual:43
     a               ldp:Resource ;
-    a               foaf:Agent ;
+    a               foaf:Person ;
     foaf:givenName  "Bob"^^xsd:string ;
     foaf:familyName "Example"^^xsd:string ;
     rdfs:comment    """Bob"""@en ;
@@ -105,7 +106,7 @@ individual:43
 
 individual:85
     a               ldp:Resource ;
-    a               foaf:Agent ;
+    a               foaf:Person ;
     foaf:givenName  "Charly"^^xsd:string ;
     foaf:familyName "Example"^^xsd:string ;
     rdfs:comment    """Charly"""@en ;
@@ -137,5 +138,7 @@ tuni:MultiVerse
 .
 
 ## endregion Multiverse
+
+### TAG: #the-universe, #tuni, #parallel-universe, #puni, #multiverse ###
 
 ## EOF fua.tuni.ttl

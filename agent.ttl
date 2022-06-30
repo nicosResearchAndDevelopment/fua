@@ -25,16 +25,23 @@
 @prefix agent:            <https://github.com/nicosResearchAndDevelopment/fua/agent.md#> .
 
 individual:jla
-    a          foaf:Person ;
-    foaf:name  "Jörg Langkau"^^xsd:string ;
-    owl:sameAs <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
+    a               owl:NamedIndividual ;
+    a               foaf:Person ;
+    foaf:name       "Jörg Langkau"^^xsd:string ;
+    foaf:givenName  "Jörg"^^xsd:string ;
+    foaf:familyName "Langkau"^^xsd:string ;
+    owl:sameAs      individual:tfhs ;
+    owl:sameAs      <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
 .
 
 individual:tfhs
+    a          owl:NamedIndividual ;
+    a          foaf:Person ;
     owl:sameAs individual:jla ;
+    owl:sameAs <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
 .
 
-[ fua:agent individual:jla ; rdfs:label "mail"@en ;     fua:private "false"^^xsd:boolean ; foaf:mbox "jlangkau@nicos-ag.com"^^owl:Thing ; ] .
+[ fua:agent individual:jla ; rdfs:label "mail"@en ;     fua:private "false"^^xsd:boolean ; foaf:mbox "mailto:jlangkau@nicos-ag.com"^^owl:Thing ; ] .
 
 [ fua:agent individual:jla ; rdfs:label "GitHub" ;      fua:private "false"^^xsd:boolean ; foaf:homepage "https://github.com/jlangkau"^^foaf:Document ; ] .
 
@@ -57,10 +64,14 @@ individual:43
 ## region some times acting as a person...
 
 individual:42
+    a                owl:NamedIndividual ;
     a                foaf:Person ;
+    a                prov:Entity ;
     foaf:dnaChecksum "42"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "female"^^xsd:string ;
     foaf:name        "Alice Example"^^xsd:string ;
+    foaf:givenName   "Alice"^^xsd:string ;
+    foaf:familyName  "Example"^^xsd:string ;
     foaf:made        individual:85 ;
     foaf:knows       individual:43 ;
     foaf:knows       individual:85 ;
@@ -68,10 +79,14 @@ individual:42
 .
 
 individual:43
+    a                owl:NamedIndividual ;
     a                foaf:Person ;
+    a                prov:Entity ;
     foaf:dnaChecksum "43"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "male"^^xsd:string ;
     foaf:name        "Bob Example"^^xsd:string ;
+    foaf:givenName   "Bob"^^xsd:string ;
+    foaf:familyName  "Example"^^xsd:string ;
     foaf:made        individual:85 ;
     foaf:knows       individual:42 ;
     foaf:knows       individual:85 ;
@@ -92,28 +107,37 @@ individual:43
 .
 
 individual:85
+    a                    owl:NamedIndividual ;
     a                    foaf:Person ;
     a                    prov:Entity ;
     foaf:dnaChecksum     "85"^^xsd:string ; ## REM: used in given identifier
     foaf:gender          "male"^^xsd:string ;
     foaf:name            "Charly Example"^^xsd:string ;
+    foaf:givenName       "Charly"^^xsd:string ;
+    foaf:familyName      "Example"^^xsd:string ;
     prov:wasGeneratedBy  [ a                      prov:Activity ;
-                           prov:startedAtTime     "2022-06-22T19:00:00Z"^^xsd:dateTime ;
-                           prov:endedAtTime       "2022-06-22T23:00:00Z"^^xsd:dateTime ;
+                           rdfs:label             "Doing"@en ;
+                           dct:description        "Doing something."@en ;
+                           prov:startedAtTime     "2021-06-22T19:00:00Z"^^xsd:dateTime ;
+                           prov:endedAtTime       "2021-06-22T23:00:00Z"^^xsd:dateTime ;
                            prov:wasAssociatedWith individual:42 ;
                            prov:wasAssociatedWith individual:43 ;
                            prov:used              individual:42 ;
                            prov:used              individual:43 ; ] ;
     prov:wasAttributedTo individual:42 ;
     prov:wasAttributedTo individual:43 ;
-    foaf:birthday        "2023-03-11T04:42:42Z"^^xsd:dateTime ;
+    foaf:birthday        "2022-03-11"^^xsd:date ;
     foaf:maker           individual:42 ;
     foaf:maker           individual:43 ;
+    dct:creator          individual:42 ;
+    dct:creator          individual:43 ;
+    dct:publisher        individual:42 ;
     foaf:knows           individual:42 ;
     foaf:knows           individual:43 ;
+    owl:sameAs           <https://github.com/nicosResearchAndDevelopment/fua/agent.md#charly> ;
     rdfs:isDefinedBy     individual:42 ;
     rdfs:isDefinedBy     individual:43 ;
-    owl:sameAs           <https://github.com/nicosResearchAndDevelopment/fua/agent.md#charly> ;
+    rdfs:isDefinedBy     tuni: ;
 .
 
 ## endregion ...some times acting together
@@ -126,14 +150,14 @@ service-instance:s-42
     a                  dave:ServiceInstance ;
     dave:serviceModel  [ ] ;
     dave:dataAgentRole dave:DATA_PROVIDER ;
-    rdfs:comment       """Most of the time acting as an agent with role 'Data Provider'."""@en ;
+    rdfs:comment       """Most of the time acting as an agent with role 'Provider'."""@en ;
 .
 
 service-instance:s-43
     a                  dave:ServiceInstance ;
     dave:serviceModel  [ ] ;
     dave:dataAgentRole dave:DATA_CONSUMER ;
-    rdfs:comment       """Most of the time acting as an agent with role 'Data Consumer'."""@en ;
+    rdfs:comment       """Most of the time acting as an agent with role 'Consumer'."""@en ;
 .
 
 service-instance:s-85

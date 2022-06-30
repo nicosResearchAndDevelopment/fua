@@ -1,6 +1,6 @@
 # Decide ODRL Profile "ftime"
 
-- preferred namespace prefix `ftime`.
+- preferred namespace prefix: `ftime`.
 
 The following is the starting point to understand how `fua` brings some aspects of time related questions into
 constraints (under rules, under policies).

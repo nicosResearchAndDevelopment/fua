@@ -1,0 +1,67 @@
+    ##region upper concepts
+## order ALPHA
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix voaf:     <http://purl.org/vocommons/voaf#> .
+@prefix void:     <http://rdfs.org/ns/void#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+##endregion upper concepts
+
+@prefix fua:      <https://www.nicos-rd.com/fua#> .
+
+@prefix :         <http://www.nicos-rd.com/fua/self#> .
+@prefix self:     <http://www.nicos-rd.com/fua/self#> .
+
+:
+    a                             owl:Ontology ;
+    a                             voaf:Vocabulary ;
+    a                             self:Self ;
+    rdfs:label                    "Model for Self as a Subject Individual"@en ;
+    dct:title                     "Model for Self as a Subject Individual"@en ;
+    rdfs:comment                  """This ontology defines classes and properties for describing the Self."""@en ;
+# <TODO> cc:license                    <http://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:creator                   <https://github.com/jlangkau> ;
+    dct:publisher                 <http://www.nicos-rd.com/> ;
+    dct:created                   "2021-01-30"^^xsd:date ;
+    dct:modified                  "2022-06-28"^^xsd:date ; ## REM : replaced by assembly
+    owl:versionInfo               "0.0.2" ;
+    vann:preferredNamespaceUri    "http://www.nicos-rd.com/fua/self#" ;
+    vann:preferredNamespacePrefix "self:" ;
+    void:vocabulary               vann:, void:, voaf:, dct: ;
+
+    ## REM: if we uncomment the following line this ontology is no longer controllable... ;-)
+    ## REM: self:self self: ; ## REM : self:
+    ## REM: ...and maybe we will see this here also:
+    ## a fua:Intelligence ;
+    skos:prefLabel                "self"^^xsd:string ;
+    ## REM: if we set 'self:self' then the following line will probably be **NOT** "rdfs:isDefinedBy fua: ;" any longer!!!
+    rdfs:isDefinedBy              fua: ;
+. # :
+
+self:Self
+    a                owl:Class ;
+    ## TODO : rdfs:subClassOf  self:Subject ;
+    skos:notation    "Self"^^xsd:string ;
+    skos:prefLabel   "Self" ;
+    rdfs:isDefinedBy fua: ;
+.
+
+self:self
+    a                owl:ObjectProperty ;
+    skos:prefLabel   "self" ;
+    rdfs:label       "Self"@en ;
+    rdfs:label       "Selbst"@de ;
+    rdfs:domain      [ rdf:type    owl:Class ;
+                       owl:unionOf ( self:Self ) ; ] ;
+    ## TODO: shacl :: 0..1
+    rdfs:range       self:Self ;
+    rdfs:isDefinedBy fua: ;
+.
+
+### TAG: #self ###
+
+## EOF fua.self.ttl

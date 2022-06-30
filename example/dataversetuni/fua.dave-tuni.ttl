@@ -1,5 +1,6 @@
 @prefix dct:              <http://purl.org/dc/terms/> .
 @prefix foaf:             <http://xmlns.com/foaf/0.1/> .
+@prefix ldp:              <http://www.w3.org/ns/ldp#> .
 @prefix org:              <http://www.w3.org/ns/org#> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -27,12 +28,12 @@
 @prefix individual:       <https://www.nicos-rd.com/data/earth/biol/individual#> .
 @prefix service-instance: <https://www.nicos-rd.com/data/earth/service/serviceinstance#> .
 
+@prefix self:             <https://www.nicos-rd.com/fua/self#> .
 @prefix dave:             <https://www.nicos-rd.com/fua/dataverse#> .
 
 @prefix ids-ec:           <https://www.internationaldataspacesassotiation.org/ecosystem/> .
 @prefix gax-ec:           <https://www.gaia-x.eu/ecosystem/> .
 @prefix meve-ec:          <https://www.nicos-rd.com/fua/metaverse/> .
-
 
 tuni:
     a              univ:Universe ;
@@ -43,12 +44,30 @@ tuni:
     dave:ecoSystem puni: ;
 .
 
+<https://www.nicos-rd.com/data/theuniverse/ai#>
+    a                ldp:Container ;
+    rdfs:label       "Artificial Intelligence"@en ;
+    ldp:contains     <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
+    rdfs:isDefinedBy tuni: ;
+.
+
+<https://www.nicos-rd.com/data/theuniverse/ai#deepthought>
+    a            ldp:Resource ;
+    a            fua:ServiceInstance ;
+    a            fua:ArtificialIntelligence ;
+    a            fua:Self ;
+    self:self    <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
+    rdfs:label   "Deep Thought" ;
+    rdfs:seeAlso "https://en.wikipedia.org/wiki/List_of_The_Hitchhiker%27s_Guide_to_the_Galaxy_characters#Deep_Thought" ;
+    ## TODO: rdfs:isDefinedBy ???: ;
+.
+
 earth:
     a                    dbo:Planet ;
     a                    dave:DataVerse ;
     a                    dave:EcoSystem ;
     ## region dave:ecoSystem
-    dave:ecoSystem       earth: ;
+    dave:ecoSystem       earth: ; ## REM: Keep in mid: **NOT** a biological one...
     dave:ecoSystem       ids-ec: ;
     dave:ecoSystem       gax-ec: ;
     dave:ecoSystem       meve-ec: ;

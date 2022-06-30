@@ -33,7 +33,16 @@ fua:ArtificialIntelligence
     skos:notation    "ArtificialIntelligence"^^xsd:string ;
     rdfs:label       "Artificial Intelligence"@en ;
     rdfs:label       "Künstliche Intelligenz"@de ;
-    dct:description  """Class of Artificial Intelligence resources."""@en ;
+    dct:description  """Class of Artificial Intelligent resources."""@en ;
+    owl:sameAs       fua:NonBiologicalIntelligence ;
+    rdfs:isDefinedBy fua: ;
+.
+
+fua:NonBiologicalIntelligence
+    a                owl:Class ;
+    rdfs:subClassOf  fua:Artificial ;
+    rdfs:subClassOf  fua:Intelligence ;
+    owl:sameAs       fua:ArtificialIntelligence ;
     rdfs:isDefinedBy fua: ;
 .
 
