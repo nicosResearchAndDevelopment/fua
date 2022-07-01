@@ -4,8 +4,8 @@
 |--------------|----------------|------------------|------------------|---------------------------|-----------------------------------|
 | act          | acting         | Act              |                  |                           |                                   |
 | aggregate    | aggregating    | Aggregation      |                  |                           |                                   |
-| anonymize    | de-identifying | Anonymization    |          | de-identify               | Better there's no reverse...      |
-| de-identify  | de-identifying | Anonymization    |          | anonymize                 |                                   |
+| anonymize    | de-identifying | Anonymization    |                  | de-identify               | Better there's no reverse...      |
+| de-identify  | de-identifying | Anonymization    |                  | anonymize                 |                                   |
 | answer       | answering      | Answering        |                  | reply                     |                                   |
 | authenticate | authenticating | Authentication   |                  |                           |                                   |
 | allow        | allowing       | Allow            |                  |                           | The grant of doing something.     |
