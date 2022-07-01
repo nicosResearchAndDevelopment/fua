@@ -1,5 +1,7 @@
 # Understanding "Action and Activity"
 
+
+
 | Action       | Activity       | Process          | Reverse Action   | Same As                   | Comment                           |
 |--------------|----------------|------------------|------------------|---------------------------|-----------------------------------|
 | act          | acting         | Act              |                  |                           |                                   |
@@ -12,6 +14,7 @@
 | authorize    | authorizing    | Authorization    | de-authorize     |                           |                                   |
 | archive      | archiving      | Archiving        |                  |                           |                                   |
 | classify     | classifying    | Classification   |                  |                           |                                   |
+| collaborate  | collaborating  | Collaboration    |                  |                           |                                   |
 | consume      | consuming      | Consumption      |                  |                           |                                   |
 | constrain    | constraining   | Constraining     |                  |                           |                                   |
 | continue     | continuing     | Continuation     |                  |                           |                                   |
@@ -38,6 +41,7 @@
 | hash         | hashing        | Hashing          |                  |                           | Better there's no reverse...      |
 | hide         | hiding         | Hiding           | present, show    |                           |                                   |
 | identify     | identifying    | Identification   |                  |                           |                                   |
+| intercept    | intercepting   | Interception     |                  |                           |                                   |
 | modify       | modifying      | Modification     |                  |                           |                                   |
 | operate      | operating      | Operation        |                  |                           |                                   |
 | pause        | pausing        | Pause            |                  | wait                      |                                   |
@@ -82,5 +86,7 @@
 | verify       | verifying      | Verification     |                  |                           |                                   |
 | wait         | waiting        | Waiting          |                  | pause                     |                                   |
 | write        | writing        |                  |                  |                           |                                   |
+
+*Table of Actions, Activities and Processes*.
 
 ---

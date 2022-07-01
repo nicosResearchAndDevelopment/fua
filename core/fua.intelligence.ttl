@@ -22,4 +22,6 @@ fua:Intelligence
     rdfs:isDefinedBy fua: ;
 .
 
+### #intelligence ###
+
 ## EOF fua.Intelligence.ttl

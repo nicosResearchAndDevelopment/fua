@@ -17,6 +17,8 @@
 @prefix fua:        <https://www.nicos-rd.com/fua#> .
 @prefix narr:       <https://www.nicos-rd.com/fua/narration#> .
 
+### TAG: #artificial, #artificial-intelligence, #ai, #non-biological-intelligence, #nbi, #intelligence ###
+
 fua:Artificial
     a                owl:Class ;
     skos:notation    "Artificial"^^xsd:string ;
