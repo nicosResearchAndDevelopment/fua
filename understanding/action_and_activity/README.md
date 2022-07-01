@@ -23,7 +23,7 @@
 | decide       | deciding       | Decision         |                  |                           |                                   |
 | decrypt      | decrypting     | Decryption       | encrypt          |                           |                                   |
 | delete       | deleting       | Deletion         | create, generate |                           |                                   |
-| erase        | eraseing       | Deletion         | create, generate |                           |                                   |
+| erase        | erasing        | Erasing          | create, generate |                           |                                   |
 | deny         | denying        | Deny             |                  |                           |                                   |
 | deserialize  | deserializing  | Deserialization  | serialize        |                           |                                   |
 | de-authorize | de-authorizing | De-Authorization | authorize        |                           |                                   |
