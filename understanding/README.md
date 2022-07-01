@@ -83,7 +83,8 @@ or [vc](https://www.w3.org/TR/vc-data-model/)) out in the field showing topics i
 
 Some of us are feeling more comfortable with JSON-LD, because it looks like [_JSON_](https://en.wikipedia.org/wiki/JSON)
 ("Yes", JSON-LD **is** JSON!!!) and [fua](../README.md) itself will present some concepts in JSON-LD
-(see [fua "Decide Pofiles"](../extension/decide/profile/README.md), these are on top on [ODRL](../glossary/README.md#odrl)
+(see [fua "Decide Pofiles"](../extension/decide/profile/README.md), these are on top
+on [ODRL](../glossary/README.md#odrl)
 and so it seems to be "natural" to do so...), also - and/or in turtle. But [fua](../README.md) focuses on turtle
 and it seems to be worth to learn it reading. Authors of [fua](../README.md) thought that it is the better way...
 
@@ -107,19 +108,27 @@ underlying concepts of [fua](../README.md) - and trigger creativity of kind read
 
 ## Deep Dive
 
-### Understanding "Data and Information"
-
-[Here](./data_and_information/README.md).
-
 ### Understanding "Identifier"
 
-[Here](./identifier/README.md).
+[Here](./identifier/).
+
+### Understanding "Data and Information"
+
+[Here](./data_and_information/).
+
+### Understanding "Action and Activity"
+
+[Here](./action_and_activity/).
+
+### Understanding "Data Exchange"
+
+[Here](./dataexchange/).
 
 ---
 
 ## You are Welcome!
 
 So, if someone is interested in implementing its own solutions using [fua](../README.md) - you're welcome! For all
-others it will (hopefully) be a manual to explore its potentials.
+others it will (hopefully) be a manual to explore `fuas` potentials and its topping [services](../gbx/README.md).
 
 ---
