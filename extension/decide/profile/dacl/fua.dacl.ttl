@@ -20,8 +20,8 @@
 @prefix acl:              <http://www.w3.org/ns/auth/acl#> .
 ## TBC: is this really used? :: @prefix vcard:            <http://www.w3.org/2006/vcard/ns#> .
 
-@prefix profile:          <https://www.nicos-rd.com/fua/odrl/profile/dacl/> .
-@prefix dacl:             <https://www.nicos-rd.com/fua/odrl/profile/dacl/extension/0-0-1/> .
+@prefix profile:          <https://www.nicos-rd.com/fua/odrl/profile/dacl/0-0-1/> .
+@prefix dacl:             <https://www.nicos-rd.com/fua/dacl#> .
 
 profile:
     a               owl:Ontology ;
@@ -34,8 +34,8 @@ profile:
     dct:license     <http://creativecommons.org/licenses/by/4.0/> ;
 .
 
-#<https://www.nicos-rd.com/fua/odrl/profile/ftime/extension/0-0-1/>
-dacl:
+
+profile:
     a              skos:Collection ;
     skos:prefLabel "ODRL Profile 'dacl' Vocabulary"@en ;
     skos:scopeNote "All terms of the ODRL Profile 'dacl'"@en ;
@@ -74,7 +74,7 @@ dacl:
 ## region extension
 dacl:Access
     a                rdfs:Class, owl:Class, skos:Concept ;
-    rdfs:subClassOf  :Offer ;
+    rdfs:subClassOf  :Permission  ;
     ## TBC: owl:disjointWith :Agreement ;
     rdfs:label       "Zugriff"@en ;
     rdfs:label       "Access"@en ;
@@ -87,7 +87,7 @@ dacl:Access
 dacl:allow
     a                  rdf:Property, owl:ObjectProperty, skos:Concept ;
     rdfs:subPropertyOf :permission ;
-    rdfs:label         "Has Allow"@en ;
+    rdfs:label         "Allow"@en ;
 #    skos:definition  "."@en ;
     rdfs:domain        dacl:Access ;
     rdfs:range         dacl:Allow ;
@@ -274,7 +274,7 @@ dacl:THERULE
                                        odrl:or [ a             odrl:Constraint ;
                                                  :leftOperand  dacl:method ;
                                                  :operator     :eq ;
-                                                 :rightOperand dacl:REMOVE ; ] ; ] ; ] ; ] ; ] ;
+                                                 :rightOperand dacl:REMOVE ; ] ; ] ; ] ; ] ;
 #    odrl:constraint   [] ;
     odrl:action      :use ;
     rdfs:isDefinedBy profile: ;

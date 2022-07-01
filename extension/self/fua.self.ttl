@@ -1,20 +1,22 @@
-    ##region upper concepts
+    ## region upper concepts
 ## order ALPHA
-@prefix dct:      <http://purl.org/dc/terms/> .
-@prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann:     <http://purl.org/vocab/vann/> .
-@prefix voaf:     <http://purl.org/vocommons/voaf#> .
-@prefix void:     <http://rdfs.org/ns/void#> .
-@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
-##endregion upper concepts
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+## endregion upper concepts
 
-@prefix fua:      <https://www.nicos-rd.com/fua#> .
+@prefix nrd:   <https://www.nicos-rd.com/> .
 
-@prefix :         <http://www.nicos-rd.com/fua/self#> .
-@prefix self:     <http://www.nicos-rd.com/fua/self#> .
+@prefix fua:   <https://www.nicos-rd.com/fua#> .
+
+@prefix :      <http://www.nicos-rd.com/fua/self#> .
+@prefix self:  <http://www.nicos-rd.com/fua/self#> .
 
 :
     a                             owl:Ontology ;
@@ -47,7 +49,7 @@ self:Self
     ## TODO : rdfs:subClassOf  self:Subject ;
     skos:notation    "Self"^^xsd:string ;
     skos:prefLabel   "Self" ;
-    rdfs:isDefinedBy fua: ;
+    rdfs:isDefinedBy nrd: ;
 .
 
 self:self
@@ -59,7 +61,7 @@ self:self
                        owl:unionOf ( self:Self ) ; ] ;
     ## TODO: shacl :: 0..1
     rdfs:range       self:Self ;
-    rdfs:isDefinedBy fua: ;
+    rdfs:isDefinedBy nrd: ;
 .
 
 ### TAG: #self ###

@@ -1443,6 +1443,9 @@ Property for tagging given subject.
 
 ### Terms Of Use
 
+The Terms of using something. The Terms are formulated by an Agent, acting as a Provider and understood and fulfilled
+by given Agent acting as a consumer.
+
 #### see
 
 - [`Usage Control`](#usage-control)
@@ -1479,6 +1482,13 @@ The "Transformation, Translation, Transmutation and Conversion Language"
 - [`ODRL ("Open Digital Rights Language")`](#odrl)
 
 ```#tracl, #control-language, #control```
+
+---
+
+
+### Trust
+
+```#trust```
 
 ---
 
