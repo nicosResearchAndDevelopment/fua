@@ -42,6 +42,7 @@ univ:
 
 univ:Universe
     a                owl:Class ;
+    rdfs:subClassOf  foaf:Agent ;
     skos:notation    "Universe"^^xsd:string ;
     rdfs:label       "Universe"@en ;
     dct:description  """Class of Universes."""@en ;
@@ -77,6 +78,7 @@ univ:star
 
 univ:PlanetarySystem
     a                owl:Class ;
+    rdfs:subClassOf  foaf:Agent ;
     skos:notation    "PlanetarySystem"^^xsd:string ;
     rdfs:label       "Planetary System"@en ;
     dct:description  """Class of Planetary Systems."""@en ;
@@ -110,6 +112,7 @@ univ:planet
 
 univ:MultiVerse
     a                owl:Class ;
+    rdfs:subClassOf  foaf:Agent ;
     skos:notation    "MultiVerse"^^xsd:string ;
     rdfs:label       "MultiVerse"@en ;
     dct:description  """Class of MultiVerses."""@en ;

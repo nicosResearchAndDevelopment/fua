@@ -2,6 +2,10 @@
 
 Some thoughts on [fua](../README.md)-underlying concepts, ideas and interpretations.
 
+## Introduction
+
+---
+
 ## Internal View
 
 [fua](../README.md) - as presented here - aims the _internal_ view on expressing data and its structure,
@@ -118,11 +122,44 @@ underlying concepts of [fua](../README.md) - and trigger creativity of kind read
 
 ### Understanding "Action and Activity"
 
-[Here](./action_and_activity/).
+Reaching out for executing [Workflows](../glossary/README.md#workflow)... [here](./action_and_activity/).
 
 ### Understanding "Data Exchange"
 
 [Here](./dataexchange/).
+
+---
+
+## Using fua
+
+`fuas` intention is **NOT** that someone has to work with it! Implementers are **NOT** advised to code on top of given
+ontologies/schemata exposed here! Service Consumers, targeting on those services evolved
+by [GAIAboX](https://www.gaiabox.eu)-family (see also: [GBX](./../gbx/README.md)), are confronted
+with well know concepts and **NOT** (most of the time :-( ) with proprietary essentials...
+
+But maybe someone finds it smart and decides to do so? Keep in mind: `fua` is **NOT**
+a standard and exists because of its implementation done by [nicos](https://www.nios-ag.com/)!
+
+---
+
+## Does Humor Belong to an Ontology or Data?
+[](#does-humor-belong-to-an-ontology-or-data)
+The authors of [`foaf`](http://xmlns.com/foaf/spec/#term_dnaChecksum) had found an answer in 2014:
+
+```turtle
+foaf:dnaChecksum a rdf:Property, owl:DatatypeProperty;
+    vs:term_status "archaic";
+    rdfs:label "DNA checksum";
+    rdfs:comment "A checksum for the DNA of some thing. Joke.";
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/>;
+    rdfs:range rdfs:Literal.
+```
+
+...saying "Yes, it does!" - and the authors of `fua` agree, [too](./../agent.ttl)!
+
+[tfhs](../agent.ttl) says:
+
+!["Keep Coding and Don't forget to Laugh"](./fua.keep-coding.png)
 
 ---
 

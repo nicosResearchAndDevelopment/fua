@@ -36,12 +36,18 @@
 @prefix meve-ec:          <https://www.nicos-rd.com/fua/metaverse/> .
 
 tuni:
-    a              univ:Universe ;
-    a              dave:DataVerse ;
-    a              dave:EcoSystem ;
-    dave:ecoSystem tuni: ;
-    dave:ecoSystem earth: ;
-    dave:ecoSystem puni: ;
+    a                    univ:Universe ;
+    a                    dave:DataVerse ;
+    a                    dave:EcoSystem ;
+    ## region dave:ecoSystem
+    dave:ecoSystem       tuni: ;
+    dave:ecoSystem       earth: ;
+    dave:ecoSystem       puni: ;
+    ## endregion dave:ecoSystem
+    ## region dave:serviceInstance
+    dave:serviceInstance <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
+    ## endregion dave:serviceInstance
+
 .
 
 <https://www.nicos-rd.com/data/theuniverse/ai#>
@@ -51,15 +57,22 @@ tuni:
     rdfs:isDefinedBy tuni: ;
 .
 
+tuni:ArtificialIntelligenceDeep
+    a                owl:Class ;
+    rdfs:subClassOf  fua:ArtificialIntelligence ;
+    rdfs:isDefinedBy tuni: ;
+.
+
 <https://www.nicos-rd.com/data/theuniverse/ai#deepthought>
-    a            ldp:Resource ;
-    a            fua:ServiceInstance ;
-    a            fua:ArtificialIntelligence ;
-    a            fua:Self ;
-    self:self    <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
-    rdfs:label   "Deep Thought" ;
-    rdfs:seeAlso "https://en.wikipedia.org/wiki/List_of_The_Hitchhiker%27s_Guide_to_the_Galaxy_characters#Deep_Thought" ;
-    ## TODO: rdfs:isDefinedBy ???: ;
+    a                ldp:Resource ;
+    a                fua:ServiceInstance ;
+    a                tuni:ArtificialIntelligenceDeep ;
+    a                fua:Self ;
+    self:self        <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
+    rdfs:label       "Deep Thought" ;
+    rdfs:seeAlso     "https://en.wikipedia.org/wiki/List_of_The_Hitchhiker%27s_Guide_to_the_Galaxy_characters#Deep_Thought" ;
+    ## REM : after DeepThought takes over control (by setting self:self) he decides that he defines himself...
+    rdfs:isDefinedBy <https://www.nicos-rd.com/data/theuniverse/ai#deepthought> ;
 .
 
 earth:
@@ -108,6 +121,7 @@ service-instance:s-42
     dave:serviceModel  [ ] ;
     dave:dataAgentRole dave:DATA_PROVIDER ;
     ## REM: is defined by Alice as a 'foaf:Person'. See: <fua/agent.ttl>
+    ## REM:   so, Alice defines her Service...
     rdfs:isDefinedBy   individual:42 ;
 .
 
@@ -117,6 +131,7 @@ service-instance:s-43
     dave:serviceModel  [ ] ;
     dave:dataAgentRole dave:DATA_CONSUMER ;
     ## REM: is defined by Bob as a 'foaf:Person'. See: <fua/agent.ttl>
+    ## REM:   so, Bob defines his Service...
     rdfs:isDefinedBy   individual:42 ;
 .
 
@@ -126,6 +141,7 @@ service-instance:s-85
     dave:serviceModel  [ ] ;
     dave:dataAgentRole dave:UNSPECIFIC ;
     ## REM: is defined by Alice and Bob as a 'foaf:Person'. They spend Charly a Service Instance. See: <fua/agent.ttl>
+    ## REM:   so, Alice and Bob define Charlies Service...
     rdfs:isDefinedBy   individual:42 ; ## REM: Alice
     rdfs:isDefinedBy   individual:43 ; ## REM: Bob
 .
@@ -143,6 +159,8 @@ puni:
 
 tuni:MultiVerse
     a              univ:MultiVerse ;
+    univ:universe  tuni: ;
+    univ:universe  puni: ;
     a              dave:DataVerse ;
     # REM: it is **NOT** an Eco System ('dave:EcoSystem')! So far...
     ## region dave:dataVerse

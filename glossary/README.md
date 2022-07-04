@@ -1,11 +1,14 @@
 # Glossary
 
-Glossary and index for the "Framework Univer Architecture" (**FUA**).
+Glossary and index for the "Framework Universe Architecture" (**FUA**).
 
 ## Introduction
 
 `fua`s [glossary](./README.md) is used **NOT** only for **fua** itself, but also used for [`GAIAboX (GBX)`](#gaiabox)
 and so for [`this repository`](../gbx/README.md) bringing **fua`s** ideas, concepts and mechanics to life.
+
+This glossary is **NOT** a collection of buzzwords, but a presentation of
+concepts and wordings `fua` works with and is aligned to.
 
 ## Summary
 
@@ -137,6 +140,28 @@ The "Application Layer" is populated with given [application](#application).
 - [Open Systems Interconnection protocols (OSI), Wikipedia](https://en.wikipedia.org/wiki/OSI_protocols)
 
 ```#application-layer```
+
+---
+
+### Artificial
+
+```#artificial```
+
+---
+
+### Artificial Intelligence
+
+See: [**AI**](#ai).
+
+```#artificial-intelligence, #ai```
+
+---
+
+### AI
+
+An Agent stating being [Artifical](#artificial) *and* [Intelligent](#intelligence).
+
+```#ai, #artificial-intelligence```
 
 ---
 
@@ -347,7 +372,8 @@ by `fua`.
 
 ### Data
 
-Value, achieved by observation or measurement and basis of [Information](#information).
+Data ([**D**](./shortcut.md#d)), value, achieved by observation or measurement and
+is the basis of [Information](#information).
 
 #### see
 
@@ -646,6 +672,12 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 
 ## F
 
+### FLOW
+
+```#flow, #workflow```
+
+---
+
 ### Framework Universe Architecture
 
 #### see
@@ -784,6 +816,12 @@ External Identifier (**IDEX**).
 - [Understanding "Identifier"](../understanding/identifier/README.md)
 
 ```#idex, #id, #identifier```
+
+---
+
+### Intelligence
+
+```#intelligence```
 
 ---
 
@@ -1639,5 +1677,15 @@ preserve [_Data Sovereignty_](#data-sovereignty).
 - [`Web Service`, Wikipedia](https://en.wikipedia.org/wiki/Web_service)
 
 ```#web-service, #ws```
+
+---
+
+### WorkFlow
+
+#### see
+
+- [`FLOW`](#flow)
+
+```#workflow, #flow```
 
 ---

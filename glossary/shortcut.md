@@ -5,16 +5,19 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 | shortcut        | Long                                                         | Comment                                     |
 |-----------------|:-------------------------------------------------------------|---------------------------------------------|
 | [ACL](#acl)     | [Access Control List](./README.md#acl)                       |                                             |
+| [AI](#ai)       | [Artifical Intelligence](./README.md#artifical-intelligence) |                                             |
 | [ATS](#ats)     | [Authentication Service](./README.md#authentication-service) |                                             |
 | [AOS](#aos)     | [Authorization Service](./README.md#authorization-service)   |                                             |
 | [AU](#au)       | [Authority](./README.md#authority)                           |                                             |
 | [CA](#ca)       | [Certificate Authority](./README.md#certificate-authority)   |                                             |
 | [CB](#cb)       | [Certification Body](./README.md#certification-body)         | same as: [NOTA](#nota)                      |
 | [CH](#ch)       | [Clearing House](./README.md#clearing-house)                 |                                             |
+| [D](#d)         | [Data](./README.md#data)                                     |                                             |
 | [DACL](#dacl)   | [Dynamic Access Control Language](./README.md#dacl)          |                                             |
 | [DAVE](#dave)   | [DataVerse](./README.md#dataverse)                           |                                             |
 | [DS](#ds)       | [Data Space](./README.md#data-space)                         |                                             |
 | [EC](#ec)       | [Eco System](./README.md#eco-system)                         | Data.                                       |
+| [FLOW](#flow)   | `fua` flow                                                   | WorkFlow                                    |
 | [FTIME](#ftime) | `fua` time                                                   | [ODRL](../glossary/README.md#odrl) profile. |
 | [IA](#ia)       | Information, Anthropocentric                                 |                                             |
 | [ID](#id)       | Identifier                                                   |                                             |
@@ -23,10 +26,18 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 | [LS](#ls)       | Logging Service                                              |                                             |
 | [NLP](#nlp)     | Natural Language Policy                                      |                                             |
 | [NOTA](#nota)   | Notarization                                                 | same as: [CB](#cb)                          |
+| NIC             | [nicos AG](https://www.nicos-ag.com)                         |                                             |
+| NRD             | nicos Research & Development GmbH                            |                                             |
 | [OA](#oa)       | Operating Agent                                              |                                             |
 | [OC](#oc)       | Operating Company                                            |                                             |
 | [OP](#op)       | Operating Person                                             |                                             |
 | [ORDL](#odrl)   | Open Digital Rights Language                                 |                                             |
+| [PDP](#pdp)     | Policy Decision Point                                        |                                             |
+| [PAP](#pap)     | Policy Administration Point                                  |                                             |
+| [PEP](#pep)     | Policy Enforcement Point                                     |                                             |
+| [PIP](#pip)     | Policy Information Point                                     |                                             |
+| [PXP](#pxp)     | Policy Execution Point                                       |                                             |
+| [PRP](#prp)     | Policy Repository Point                                      |                                             |
 | [REG](#reg)     | Registry                                                     |                                             |
 | [REL](#rel)     | Rights Expression Language                                   |                                             |
 | [REM](#rem)     | Remark                                                       |                                             |
@@ -45,37 +56,46 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 
 "**A**ccess **C**ontrol **L**ist".
 
-[ACL](./README.md#acl).
+[ACL, glossary](./README.md#acl).
 
 ```#acl, #acces-control-list```
 
+## AI
+
+"**A**rtificial **I**ntelligence.
+
+- [AI, glossary](./README.md#ai).
+- [AI, extension](./../extension/artificial/).
+
+```#ai, #artificial-intelligence```
+
 ## ATS
 
-[**A**u**t**hentication **S**ervice](./README.md#authentication-service).
+[**A**u**t**hentication **S**ervice, glossary](./README.md#authentication-service).
 
 ```#ats, #authentication-service```
 
 ## AOS
 
-[**A**uth**o**rization **S**ervice](./README.md#authorization-service).
+- [**A**uth**o**rization **S**ervice](./README.md#authorization-service).
 
 ```#aos, #autherization-service```
 
 ## AU
 
-[**Au**thority](../glossary/README.md#authority).
+- [**Au**thority, glossary](./README.md#authority).
 
 ```#au, #authority```
 
 ## CA
 
-[**C**ertificate **A**uthority](./README.md#certificate-authority).
+- [**C**ertificate **A**uthority, glossary](./README.md#certificate-authority).
 
 ```#ca, #certificate-authority, #authority, #au```
 
 ## CB
 
-[**C**ertification **B**ody](./README.md#certification-body).
+- [**C**ertification **B**ody, glossary](./README.md#certification-body).
 
 same as:
 
@@ -85,9 +105,13 @@ same as:
 
 ## CH
 
-[**C**learing **H**ouse](./README.md#clearing-house).
+- [**C**learing **H**ouse, glossary](./README.md#clearing-house).
 
 ```#ch, #clearing-house```
+
+## D
+
+- [**D**ata, glossary](./README.md#data).
 
 ## DACL
 
@@ -101,7 +125,7 @@ same as:
 
 ## DAVE
 
-[**Da**ta**Ve**rse](./README.md#dataverse).
+- [**Da**ta**Ve**rse, glossary](./README.md#dataverse).
 
 Preferred namespace prefix: `dave`
 
@@ -134,9 +158,15 @@ of [DataVerse](./README.md#dataverse).
 
 ## DS
 
-[**D**ata **S**pace](./README.md#data-space).
+- [**D**ata **S**pace, glossary](./README.md#data-space).
 
 ```#ds, #data-space```
+
+## FLOW
+
+- [**F**ua Work**Flow**, glossary](./README.md#flow).
+
+```#flow, #workflow``
 
 ## FTIME
 
@@ -154,13 +184,13 @@ Preferred namespace prefix: `ftime`
 
 ## IA
 
-[**I**nformation, **A**nthropocentric](./README.md#ia).
+- [**I**nformation, **A**nthropocentric, glossary](./README.md#ia).
 
 ```#ia, #information```
 
 ## ID
 
-[**Id**entifier](./README.md#identifier).
+- [**Id**entifier, glossary](./README.md#identifier).
 
 ```#id, #identifier```
 
@@ -172,31 +202,31 @@ Preferred namespace prefix: `ftime`
 
 ## IdP
 
-[**Id**entity **P**rovider](./README.md#identity-provider).
+- [**Id**entity **P**rovider, glossary](./README.md#identity-provider).
 
 ```#idp, #identity-provider```
 
 ## EC
 
-[**E**co **S**ystem](./README.md#eco-system).
+- [**E**co **S**ystem, glossary](./README.md#eco-system).
 
 ```#ec, #eco-system```
 
 ## LS
 
-[**L**ogging **S**ervice](./README.md#logging-service).
+- [**L**ogging **S**ervice, glossary](./README.md#logging-service).
 
 ```#ls, #logging-service```
 
 ## NLP
 
-[**N**atural **L**anguage **P**olicy](./README.md#nlp).
+- [**N**atural **L**anguage **P**olicy, glossary](./README.md#nlp).
 
 ```#nlp, #natural-language-policy```
 
 ## NOTA
 
-["**Nota**risation"](./README.md#notarization).
+- [**Nota**risation, glossary](./README.md#notarization).
 
 same as:
 
@@ -206,15 +236,17 @@ same as:
 
 ## OA
 
-[**O**perating **A**gent](./README.md#operating-agent).
+- [**O**perating **A**gent, glossary](./README.md#operating-agent).
 
 A role of given [Agent](./README.md#agent), so doing something.
+
+An **OA** triggers the action *operate* and starts the activity *operating*.
 
 ```#oa, #operating-agent```
 
 ## OC
 
-[**O**perating **C**ompany](./README.md#operating-company).
+- [**O**perating **C**ompany, glossary](./README.md#operating-company).
 
 Sub Class of [Operating Agent (OA)](#oa).
 Sub Class of [`org:Organization`](https://www.w3.org/TR/vocab-org/#class-organization).
@@ -223,7 +255,7 @@ Sub Class of [`org:Organization`](https://www.w3.org/TR/vocab-org/#class-organiz
 
 ## OP
 
-[**O**perating **P**erson](./README.md#operating-person).
+- [**O**perating **P**erson, glossary](./README.md#operating-person).
 
 Sub Class of ['Operating Agent' (OA)](#oa).
 Sub Class of ['foaf:Person'](http://xmlns.com/foaf/0.1/).
@@ -232,19 +264,55 @@ Sub Class of ['foaf:Person'](http://xmlns.com/foaf/0.1/).
 
 ## ODRL
 
-[**O**pen **D**igital **R**ights **L**anguage](./README.md#odrl).
+- [**O**pen **D**igital **R**ights **L**anguage, glossary](./README.md#odrl).
 
-```#odrl```
+```#odrl, #rel, #rights-expression-language```
+
+## PDP
+
+- **P**olicy **D**ecision **P**oint
+
+```#pep, #policy, #decision```
+
+## PAP
+
+- **P**olicy **A**dministration **P**oint
+
+```#pap, #policy, #administration```
+
+## PEP
+
+- **P**olicy **E**nforcement **P**oint
+
+```#pep, #policy, #enforcement```
+
+## PIP
+
+- **P**olicy **I**nformation **P**oint
+
+```#pip, #policy, #information```
+
+## PXP
+
+- **P**olicy **E**xecution **P**oint
+
+```#pxp, #policy, #execution```
+
+## PRP
+
+- **P**olicy **R**epository **P**oint
+
+```#prp, #policy, #repository```
 
 ## REG
 
-[**Re**gistry](./README.md#registry)
+- [**Re**gistry, glossary](./README.md#registry)
 
 ```#reg, #registry```
 
 ## REL
 
-[*R*ights *E*xpression *L*anguage](./README.md#rel).
+- [*R*ights *E*xpression *L*anguage, glossary](./README.md#rel).
 
 ```#rel, #rights-expression-language, #rights```
 
@@ -384,7 +452,7 @@ Preferred namespace prefix: `tracl`
 
 ## WAC
 
-"**W**eb **A**eccess**C**ontrol"
+"**W**eb **A**ccess**C**ontrol"
 
 ```#wac, #web-access-control, #access, #control```
 

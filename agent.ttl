@@ -16,6 +16,7 @@
 @prefix nrd:              <https://www.nicos-rd.com/> .
 
 @prefix fua:              <https://github.com/nicosResearchAndDevelopment/fua#> .
+@prefix self:             <https://www.nicos-rd.com/fua/self#> .
 @prefix dave:             <https://www.nicos-rd.com/fua/dataverse#> .
 @prefix tuni:             <https://www.nicos-rd.com/data/theuniverse/> .
 @prefix earth:            <https://www.nicos-rd.com/data/earth/> .
@@ -25,13 +26,16 @@
 @prefix agent:            <https://github.com/nicosResearchAndDevelopment/fua/agent.md#> .
 
 individual:jla
-    a               owl:NamedIndividual ;
-    a               foaf:Person ;
-    foaf:name       "Jörg Langkau"^^xsd:string ;
-    foaf:givenName  "Jörg"^^xsd:string ;
-    foaf:familyName "Langkau"^^xsd:string ;
-    owl:sameAs      individual:tfhs ;
-    owl:sameAs      <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
+    a                owl:NamedIndividual ;
+    a                self:Self ;
+    a                foaf:Person ;
+    self:self        individual:jla ;
+    foaf:name        "Jörg Langkau"^^xsd:string ;
+    foaf:givenName   "Jörg"^^xsd:string ;
+    foaf:familyName  "Langkau"^^xsd:string ;
+    foaf:dnaChecksum "thfs"^^xsd:string ;
+    owl:sameAs       individual:tfhs ;
+    owl:sameAs       <https://github.com/nicosResearchAndDevelopment/fua/agent.md#jla> ;
 .
 
 individual:tfhs
@@ -65,8 +69,10 @@ individual:43
 
 individual:42
     a                owl:NamedIndividual ;
+    a                self:Self ;
     a                foaf:Person ;
     a                prov:Entity ;
+    self:self        individual:42 ;
     foaf:dnaChecksum "42"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "female"^^xsd:string ;
     foaf:name        "Alice Example"^^xsd:string ;
@@ -80,8 +86,10 @@ individual:42
 
 individual:43
     a                owl:NamedIndividual ;
+    a                self:Self ;
     a                foaf:Person ;
     a                prov:Entity ;
+    self:self        individual:43 ;
     foaf:dnaChecksum "43"^^xsd:string ; ## REM: used in given identifier
     foaf:gender      "male"^^xsd:string ;
     foaf:name        "Bob Example"^^xsd:string ;
@@ -95,8 +103,9 @@ individual:43
 
 ## region some times acting together...
 
-## REM: If you ever had asked yourself "IA: Does humor belongs to an ontology?" maybe you've answered
-## REM:     it with "IA: YES!", after looking at this: <http://xmlns.com/foaf/spec/#term_dnaChecksum>
+## REM: If you ever had asked yourself "IA: Does humor belongs to an ontology or data?" maybe you've answered
+## REM:   it with "YES!", after looking at this: <http://xmlns.com/foaf/spec/#term_dnaChecksum>
+## REM:   see also: <root::understanding/README.md#does-humor-belong-to-an-ontology-or-data>
 
 individual:42
     a prov:Entity ;
@@ -108,8 +117,11 @@ individual:43
 
 individual:85
     a                    owl:NamedIndividual ;
+    a                    self:Self ;
     a                    foaf:Person ;
     a                    prov:Entity ;
+    ## REM : this step will take some time till it happens...
+    ##         self:self            individual:85 ;
     foaf:dnaChecksum     "85"^^xsd:string ; ## REM: used in given identifier
     foaf:gender          "male"^^xsd:string ;
     foaf:name            "Charly Example"^^xsd:string ;

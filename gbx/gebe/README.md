@@ -1,23 +1,27 @@
-# GBX Testbed
+# GAIAboX Testbed
 
-The "GAIAboX Testbed" ([**GBX-TEBE**](#tebe), `tebe`).
+The "GAIAboX Testbed" ([**GEBE**]).
+
+Preferred namespace prefix: `gebe`.
 
 ## Table of Content
 
 - [Introduction](#introduction)
 - [Eco System](#eco-system)
+    - [Net](#net)
     - [International Data Spaces](#international-data-spaces)
     - [GAIA-X](#gaia-x)
     - [MetaVerse](#metaverse)
-- [GAIAboX "Testsuite"](#gaiabox-international-data-spaces)
+- [Onboarding](#onboarding)
+- [GAIAboX "Testsuite"](#testsuite)
 
 ---
 
 ## Introduction
 
-"GAIAboX Testbed" ([**GBX-TEBE**](#tebe), `tebe`) is a DataVerse.
+"GAIAboX Testbed" (**GEBE**) is a DataVerse.
 
-"GAIAboX Testbed" ([**GBX-TEBE**](#tebe), `tebe`) as a DataVerse contains [Eco Systems](#eco-system).
+"GAIAboX Testbed" (**GEBE**) as a DataVerse contains [Eco Systems](#eco-system).
 
 "GAIAboX Testbed" is an Agent (Provider), inter-acting with and controlled by *the* [Testsuite](#testsuite) and .
 
@@ -27,9 +31,16 @@ The "GAIAboX Testbed" ([**GBX-TEBE**](#tebe), `tebe`).
 
 The following Eco Systems are focussed:
 
+- [Net](#net)
 - [International Data Spaces](#international-data-spaces)
 - [GAIA-X](#gaia-x)
 - [MetaVerse](#metaverse)
+
+### Net
+
+```#net```
+
+---
 
 ### International Data Spaces
 
@@ -56,13 +67,22 @@ The following Eco Systems are focussed:
 
 ```#ecosystem, #ec```
 
+## Onboarding
+
+```#onboarding```
+
+---
+
 ## Testsuite
 
-The ["GAIAboX Testsuite"](./tesi/README.md)" ([**`TESI`**](#tesi), `tesi`).
+The ["GAIAboX Testsuite"](./tesi/README.md)" (**`GESI`**)).
 
-Testsuite "Testsuite" is an Agent, inter-acting with the [Testbed](./README.md) as a Consumer and Controller.
+Preferred namespace prefix: `gesi`.
 
-```#gbx-testsuite, #testsuite, #tesi```
+Testsuite "Testsuite" is an [Agent](../../glossary/README.md#agent), inter-acting with the [Testbed](./README.md) as a
+Consumer and Controller of given GAIAboX Testbed (**GEBE**).
+
+```#gbx-testsuite, #testsuite, #gesi```
 
 ---
 

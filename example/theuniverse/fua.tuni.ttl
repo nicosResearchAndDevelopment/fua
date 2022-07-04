@@ -29,6 +29,7 @@
 
 tuni:
     a                             univ:Universe ;
+    a                             foaf:Agent ;
     vann:preferredNamespaceUri    "https://www.nicos-rd.com/data/theuniverse/" ;
     vann:preferredNamespacePrefix "tuni" ;
     rdfs:label                    "The Universe"@en ;
@@ -39,6 +40,7 @@ tuni:
 
 tuni:MilkyWay
     a                    dbo:Galaxy ;
+    a                    foaf:Agent ;
     rdfs:label           "Milky Way"@en ;
     univ:planetarySystem tuni:SolarSystem ;
     rdfs:isDefinedBy     tuni: ;
@@ -54,6 +56,7 @@ tuni:SolarSystem
 
 tuni:Sun
     a                dbo:Star ;
+    a                foaf:Agent ;
     rdfs:label       "Sun"@en ;
     owl:sameAs       dbr:Sun ;
     rdfs:seeAlso     dbc:Sun ;
@@ -63,6 +66,7 @@ tuni:Sun
 
 earth:
     a                dbo:Planet ;
+    a                foaf:Agent ;
     rdfs:label       "Earth"@en ;
     rdfs:label       "Erde"@de ;
     owl:sameAs       dbr:Earth ;
@@ -116,6 +120,7 @@ individual:85
 
 puni:
     a                             univ:Universe ;
+    a                             foaf:Agent ;
     vann:preferredNamespaceUri    "https://www.nicos-rd.com/data/paralleluniverse/" ;
     vann:preferredNamespacePrefix "puni" ;
     rdfs:label                    "The Parallel Universe"@en ;
@@ -128,6 +133,7 @@ puni:
 
 tuni:MultiVerse
     a                univ:MultiVerse ;
+    a                foaf:Agent ;
     rdfs:label       "The MultiVerse"@en ;
     ## region univ:universe
     univ:universe    tuni: ;

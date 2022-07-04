@@ -1,5 +1,6 @@
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#>.
 @prefix org:   <http://www.w3.org/ns/org#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,6 +14,23 @@
 
 @prefix fua:   <https://www.nicos-rd.com/fua#> .
 
+fua:core
+    ## region skos
+    a              skos:Collection ;
+    a              ldp:BasicContainer ; ## TODO : make it a better container...
+    skos:notation  "core"^^xsd:string ;
+    skos:prefLabel "fua:core"@en ;
+    skos:scopeNote "All terms of fua core"@en ;
+    ## region skos :: member
+    ## region skos :: member :: Property
+    skos:member    fua:agent ;
+    skos:member    fua:private ;
+    skos:member    fua:timestamp ;
+    ## endregion skos :: member :: Property
+    ## endregion skos :: member
+    ## region skos
+.
+
 fua:timestamp
     a                owl:DatatypeProperty ;
     skos:notation    "timestamp"^^xsd:string ;
@@ -22,6 +40,7 @@ fua:timestamp
     rdfs:isDefinedBy fua: ;
 .
 
+## TODO : fua:sourceTimestamp :: move to Subject/Property
 fua:sourceTimestamp
     a                  owl:DatatypeProperty ;
     rdfs:subPropertyOf fua:timestamp ;
@@ -32,15 +51,15 @@ fua:sourceTimestamp
     rdfs:isDefinedBy   fua: ;
 .
 
-fua:serverTimestamp
-    a                  owl:DatatypeProperty ;
-    rdfs:subPropertyOf fua:timestamp ;
-    skos:notation      "serverTimestamp"^^xsd:string ;
-    rdfs:label         "Server Timestamp"@en ;
-    rdfs:label         "Server-Zeitstempel"@de ;
-    rdfs:range         xsd:dateTimeStamp ;
-    rdfs:isDefinedBy   fua: ;
-.
+#fua:serverTimestamp
+#    a                  owl:DatatypeProperty ;
+#    rdfs:subPropertyOf fua:timestamp ;
+#    skos:notation      "serverTimestamp"^^xsd:string ;
+#    rdfs:label         "Server Timestamp"@en ;
+#    rdfs:label         "Server-Zeitstempel"@de ;
+#    rdfs:range         xsd:dateTimeStamp ;
+#    rdfs:isDefinedBy   fua: ;
+#.
 
 fua:agent
     a                owl:DatatypeProperty ;
@@ -61,5 +80,11 @@ fua:private
     rdfs:range       xsd:boolean ;
     rdfs:isDefinedBy fua: ;
 .
+
+fua:
+    skos:member fua:core ;
+.
+
+### #core, #agent, #timestamp, #private ###
 
 ## EOF fua.core.ttl

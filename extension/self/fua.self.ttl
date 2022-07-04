@@ -41,7 +41,7 @@
     ## a fua:Intelligence ;
     skos:prefLabel                "self"^^xsd:string ;
     ## REM: if we set 'self:self' then the following line will probably be **NOT** "rdfs:isDefinedBy fua: ;" any longer!!!
-    rdfs:isDefinedBy              fua: ;
+    rdfs:isDefinedBy              nrd: ;
 . # :
 
 self:Self
@@ -49,7 +49,7 @@ self:Self
     ## TODO : rdfs:subClassOf  self:Subject ;
     skos:notation    "Self"^^xsd:string ;
     skos:prefLabel   "Self" ;
-    rdfs:isDefinedBy nrd: ;
+    rdfs:isDefinedBy self: ;
 .
 
 self:self
@@ -61,7 +61,7 @@ self:self
                        owl:unionOf ( self:Self ) ; ] ;
     ## TODO: shacl :: 0..1
     rdfs:range       self:Self ;
-    rdfs:isDefinedBy nrd: ;
+    rdfs:isDefinedBy self: ;
 .
 
 ### TAG: #self ###

@@ -13,7 +13,14 @@
 
 @prefix fua:   <https://www.nicos-rd.com/fua#> .
 
+fua:core
+    ## region skos :: member
+    skos:member fua:Intelligence ;
+    ## endregion skos ::member
+.
+
 fua:Intelligence
+    ## TODO : fua:Intelligence :: abstract
     a                owl:Class ;
     skos:notation    "Intelligence"^^xsd:string ;
     rdfs:label       "Intelligence"@en ;

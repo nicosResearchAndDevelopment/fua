@@ -21,10 +21,25 @@
 
 fua:Artificial
     a                owl:Class ;
-    skos:notation    "Artificial"^^xsd:string ;
     rdfs:label       "Artificial"@en ;
     rdfs:label       "Künstlich"@de ;
     dct:description  """Class of Artificial resources."""@en ;
+    ## region skos
+    a                skos:Collection ;
+    a                ldp:BasicContainer ; ## TODO : make it a better container...
+    skos:notation    "Artificial"^^xsd:string ;
+    skos:prefLabel   "fua:Artificial"@en ;
+    skos:scopeNote   "All terms of fua Artificial"@en ;
+    ## region skos :: member
+    ## region skos :: member :: Class
+    skos:member      fua:Artificial ;
+    skos:member      fua:ArtificialIntelligence ;
+    skos:member      fua:NonBiologicalIntelligence ;
+    ## endregion skos :: member :: Class
+    ## region skos :: member :: Property
+    ## endregion skos :: member :: Property
+    ## endregion skos :: member
+    ## region skos
     rdfs:isDefinedBy fua: ;
 .
 
