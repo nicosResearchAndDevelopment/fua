@@ -40,7 +40,7 @@ The 'DataVerse-Model' has a strong focus on 'The Organization Ontology', W3C, to
     dct:creator                   <https://jlangkau.solidweb.org/> ;
     dct:publisher                 <http://www.nicos-rd.com/> ;
     dct:created                   "2021-11-29"^^xsd:date ;
-    dct:modified                  "2022-07-12"^^xsd:date ; ## REM : replaced by assembly
+    dct:modified                  "2022-07-07"^^xsd:date ; ## REM : replaced by assembly
     owl:versionInfo               "0.0.3" ;
     vann:preferredNamespaceUri    "https://www.nicos-rd.com/fua/dataverse#" ;
     vann:preferredNamespacePrefix "dave:" ;
@@ -59,6 +59,7 @@ The 'DataVerse-Model for Data Spaces' defines classes and properties for describ
     ## region skos :: member
     ## region skos :: member :: Class
     skos:member                   dave:DataVerse ;
+    skos:member                   dave:Domain ;
     ## endregion skos :: member :: Class
     ## region skos :: member :: Property :: ALPHA
     skos:member                   dave:acronym ;
@@ -110,9 +111,72 @@ dave:acronym
     rdfs:isDefinedBy   nrd: ;
 .
 
+## region Domain
+dave:Domain
+    a                owl:Class ;
+    ## TODO: dave:Domain :: rdfs:subClassOf fua:Domain
+    rdfs:label       "Class of DataVerse Domains"@en ;
+    rdfs:label       "Klasse der DataVerses Domänen"@de ;
+    ## region skos
+    skos:notation    "Domain"^^xsd:string ;
+    skos:prefLabel   "dave:Domain Class"^^xsd:string ;
+    ## endregion skos
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:domain
+    a                owl:ObjectProperty ;
+    skos:notation    "domain"^^xsd:string ;
+    skos:prefLabel   "domain"^^xsd:string ;
+    rdfs:label       "Domain"@en ;
+    rdfs:label       "Domäne"@de ;
+    rdfs:domain      dave:EcoSystem ;
+    rdfs:domain      dave:Domain ; ## REM: used for stating a forrest.
+    rdfs:range       dave:Domain ;
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:SubDomain
+    a                owl:Class ;
+    rdfs:subClassOf  dave:Domain ;
+    ## TODO: dave:Domain :: rdfs:subClassOf fua:Domain
+    rdfs:label       "Class of DataVerse SubDomain"@en ;
+    rdfs:label       "Klasse der DataVerses Unter-Domänen"@de ;
+    ## region skos
+    skos:notation    "SubDomain"^^xsd:string ;
+    skos:prefLabel   "dave:SubDomain Class"^^xsd:string ;
+    ## endregion skos
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:subDomain
+    a                owl:ObjectProperty ;
+    skos:notation    "domain"^^xsd:string ;
+    skos:prefLabel   "domain"^^xsd:string ;
+    rdfs:label       "Domain"@en ;
+    rdfs:label       "Domäne"@de ;
+    rdfs:domain      dave:Domain ; ## REM: used for stating a forrest.
+    rdfs:domain      dave:SubDomain ; ## REM: used for stating a forrest.
+    rdfs:range       dave:SubDomain ;
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:parentDomain
+    a                owl:ObjectProperty ;
+    skos:notation    "parentDomain"^^xsd:string ;
+    skos:prefLabel   "Parent Domain"^^xsd:string ;
+    rdfs:label       "Parent Domain"@en ;
+    rdfs:domain      dave:SubDomain ; ## REM: used for stating a forrest.
+    rdfs:range       dave:SubDomain ;
+    rdfs:range       dave:Domain ;
+    rdfs:isDefinedBy nrd: ;
+.
+
+## endregion Domain
+
 ## region Individual
 
-dave:dave
+dave:DAVE
     a dave:DataVerse ;
     a fua:Self ;
     a gbx:GAIAboX ; ## REM: owl:Thing, foaf:Agent
