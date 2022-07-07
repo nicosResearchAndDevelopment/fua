@@ -434,8 +434,6 @@ Two Agents are addressed:
 
 **T**able **o**f **C**ontent.
 
-
-
 ## TODO
 
 **To** **Do**!
@@ -472,7 +470,7 @@ Something has to be done.
 ## TL;DR: A very, very long story (very boring, indeed!).
 ```
 
-*Example of a very long text in `turtle`*.
+*Example of a very long text never red in `turtle`*.
 
 ### markdown
 
@@ -485,7 +483,7 @@ A very, very long story (very boring, indeed.
 ---
 ```
 
-*Example of a very long text in `markdown`*.
+*Example of a very long text (not red) in `markdown`*.
 
 ```#tldr```
 
@@ -505,13 +503,13 @@ Preferred namespace prefix: `tracl`
 
 ## UCON
 
-"**U**sage **Co**ntrol"
+"**U**sage **Co**ntrol".
 
 ```#ucon, #usage, #control```
 
 ## WAC
 
-"**W**eb **A**ccess**C**ontrol"
+"**W**eb **A**ccess **C**ontrol"
 
 ```#wac, #web-access-control, #access, #control```
 
