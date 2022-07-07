@@ -72,17 +72,35 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 
 ```#ai, #artificial-intelligence```
 
+## AMEC
+
+[**A**utorization **Mmec**anism, glossary](./README.md#authorization-mechanism).
+
+```#amec, #authorization-mechanism, #authorization```
+
+## AO
+
+[**A**uth**o**rization glossary](./README.md#authorization).
+
+```#at, #authorization, #process```
+
+## AT
+
+[**A**u**t**hentication glossary](./README.md#authentication).
+
+```#at, #authentication, #process```
+
 ## ATS
 
 [**A**u**t**hentication **S**ervice, glossary](./README.md#authentication-service).
 
-```#ats, #authentication-service```
+```#ats, #authentication-service, #authentication, #service```
 
 ## AOS
 
 - [**A**uth**o**rization **S**ervice](./README.md#authorization-service).
 
-```#aos, #autherization-service```
+```#aos, #authorization-service, #authorization, #service```
 
 ## AU
 
@@ -169,7 +187,7 @@ of [DataVerse](./README.md#dataverse).
 
 - [**F**ua Work**Flow**, glossary](./README.md#flow).
 
-```#flow, #workflow, #process, #action, #activity``
+```#flow, #workflow, #process, #action, #activity```
 
 ## FTIME
 
@@ -239,6 +257,14 @@ Preferred namespace prefix: `ftime`
 
 ```#ls, #logging-service```
 
+## NFNI
+
+A very magic shortcut.
+
+> IA: "NF;NI"
+
+´´´ #nfni ´´´
+
 ## NLP
 
 - [**N**atural **L**anguage **P**olicy, glossary](./README.md#nlp).
@@ -289,45 +315,45 @@ Sub Class of ['foaf:Person'](http://xmlns.com/foaf/0.1/).
 
 ```#odrl, #rel, #rights-expression-language```
 
-## PDP
-
-- **P**olicy **D**ecision **P**oint
-
-```#pep, #policy, #decision```
-
 ## PAP
 
 - **P**olicy **A**dministration **P**oint
 
-```#pap, #policy, #administration```
+```#pap, #policy-administration-point, #policy, #administration```
+
+## PDP
+
+- **P**olicy **D**ecision **P**oint
+
+```#pdp, #policy-decision-point, #policy, #decision```
 
 ## PEP
 
 - **P**olicy **E**nforcement **P**oint
 
-```#pep, #policy, #enforcement```
+```#pep, #policy-enforcement-point, #policy, #enforcement```
 
 ## PIP
 
 - **P**olicy **I**nformation **P**oint
 
-```#pip, #policy, #information```
+```#pip, #policy-information-point, #policy, #information```
 
 ## PXP
 
 - **P**olicy **E**xecution **P**oint
 
-```#pxp, #policy, #execution```
+```#pxp, #policy-execution-point, #policy, #execution```
 
 ## PRP
 
 - **P**olicy **R**epository **P**oint
 
-```#prp, #policy, #repository```
+```#prp, #policy-repository-point, #policy, #repository```
 
 ## REG
 
-- [**Re**gistry, glossary](./README.md#registry)
+- [**Reg**istry, glossary](./README.md#registry)
 
 ```#reg, #registry```
 
@@ -361,6 +387,8 @@ Sub Class of ['foaf:Person'](http://xmlns.com/foaf/0.1/).
 
 **T**o **B**e **C**larified!
 
+```#tbc, #table-of-content```
+
 ### Description
 
 Something has to be clarified.
@@ -392,17 +420,25 @@ Two or more [agents](./README.md#agent) - maybe some [persons](./README.md#perso
 
 ### Example
 
-> TBD: **MAY**be we have to come closer to the problem!
+> TBD: **MAY** be we have to come closer to the problem!
 
 #### Agents
+
+Two Agents are addressed:
 
 > TBD@JLA,SPE: what is going on here?
 
 ```#tbd```
 
+## TBC
+
+**T**able **o**f **C**ontent.
+
+
+
 ## TODO
 
-**T**o **D**o!
+**To** **Do**!
 
 Something has to be done.
 
@@ -426,12 +462,14 @@ Something has to be done.
 
 ## TLDR
 
-**T**oo **L**ong, **D**idn't **R**ead!
+**T**oo **L**ong; **D**idn't **R**ead! (**TLDR**)
+
+> IA: "TL;DR"
 
 ### turtle
 
 ```turtle
-## TLDR: A very, very long story (very boring, indeed!).
+## TL;DR: A very, very long story (very boring, indeed!).
 ```
 
 *Example of a very long text in `turtle`*.
@@ -439,7 +477,7 @@ Something has to be done.
 ### markdown
 
 ```markdown
-## TLDR
+## TL;DR
 
 A very, very long story (very boring, indeed.
  And it gets **NOT** better written in `markdown`!!!).

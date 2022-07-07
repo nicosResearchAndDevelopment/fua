@@ -2,19 +2,16 @@
 
 Glossary and index for the "Framework Universe Architecture" (**FUA**).
 
+> TODO@JLA: put in ToC
+
 ## Introduction
 
-`fua`s [glossary](./README.md) is used **NOT** only for **fua** itself, but also used for [`GAIAboX (GBX)`](#gaiabox)
-and so for [`this repository`](../gbx/README.md) bringing **fua`s** ideas, concepts and mechanics to life.
+**fua**s [glossary](./README.md) is used **NOT** only for **fua** itself, but also used for [GAIAboX (GBX)](#gaiabox)
+and so for [this repository](../gbx/README.md) bringing **fua**s ideas, concepts and mechanics to life  - and service.
 
 This glossary is **NOT** a collection of buzzwords, but a presentation of
 concepts and wordings `fua` works with and is aligned to.
 
-## Summary
-
-The [glossary](./README.md) acts as a gate to further [information](#information) and more detailed explanations.
-
----
 
 ## A
 
@@ -165,9 +162,33 @@ An Agent stating being [Artifical](#artificial) *and* [Intelligent](#intelligenc
 
 ---
 
+### Authentication
+
+"Authentication" (**AT**).
+
+```#authentication, #process, #authorization-mechanism```
+
+---
+
 ### Authentication Service
 
 ```#authentication-service, #ats```
+
+---
+
+### Authorization
+
+"Authorization" (**AO**).
+
+```#authorization, #process, #authorization-mechanism```
+
+---
+
+### Authorization Mechanism
+
+"Authorization Mechanism" (**AMEC**).
+
+```#authorization-mechanism, #authorization, #mechanism```
 
 ---
 
@@ -238,7 +259,15 @@ Bob has to execute commands, being [controlled](#controller) by [Alice](#alice).
 
 ---
 
+### Charly
+
+> TODO: Charly
+
+---
+
 ### Claim
+
+> TODO: Claim
 
 ---
 
@@ -262,7 +291,7 @@ Constraints are typically hosted in [rules](#rule).
 
 - [`Rule`](#rule)
 
-```#constraint```
+```#constraint, #rule```
 
 ---
 
@@ -432,11 +461,11 @@ decorated with some  [Meta Data](#meta-data), etc.
 
 #### see also
 
-- [`Data`](#data)
-- [`Infrastructure Data`](#infrastructure-data)
-- [`Payload Data`](#payload-data)
-- [`Data Provider`](#data-provider)
-- [`Data consumer`](#data-consumer)
+- [Data](#data)
+- [Infrastructure Data](#infrastructure-data)
+- [Payload Data](#payload-data)
+- [Data Provider](#data-provider)
+- [Data consumer](#data-consumer)
 
 ```#data-exchange, #data-consumer, #data-provider```
 
@@ -454,7 +483,7 @@ decorated with some  [Meta Data](#meta-data), etc.
 
 #### see
 
-- [`Computing Data`](#Computing-data)
+- [Computing Data](#Computing-data)
 
 ---
 
@@ -462,7 +491,7 @@ decorated with some  [Meta Data](#meta-data), etc.
 
 #### see
 
-- [`Infrastructure Data`](#infrastructure-data)
+- [Infrastructure Data](#infrastructure-data)
 
 ```#infrastructure-data```
 
@@ -472,7 +501,7 @@ decorated with some  [Meta Data](#meta-data), etc.
 
 #### see
 
-- [`Meta Data`](#meta-data)
+- [Meta Data](#meta-data)
 
 ---
 
@@ -480,7 +509,7 @@ decorated with some  [Meta Data](#meta-data), etc.
 
 #### see
 
-- [`Payload Data`](#payload-data)
+- [Payload Data](#payload-data)
 
 ---
 
@@ -496,7 +525,7 @@ The "Data Layer" is an overarching [Layer](#layer), so it can be stated
 
 #### see
 
-- [`Linked Data](#linked-data)
+- [Linked Data](#linked-data)
 
 ---
 
@@ -533,8 +562,8 @@ In the end it is this: [Data Provider](#data-provider).
 
 #### see
 
-- [`Data Consumer`](#data-consumer)
-- [`Role`](#role)
+- [Data Consumer](#data-consumer)
+- [Role](#role)
 
 ```#data-provider, #role```
 
@@ -562,7 +591,7 @@ Another, often used _chatchphrase_ is "Data Provenance". But `fua` is focused on
 
 #### see
 
-- [`Data Lineage`](#data-lineage)
+- [Data Lineage](#data-lineage)
 
 ```#data-provenance, #data-lineage```
 
@@ -587,11 +616,11 @@ A [Domain](#domain) even exists _without_ exchanging [data](#data).
 
 #### see
 
-- [`Domain`](#domain)
-- [`Data Provider`](#data-provider)
-- [`Data Consumer`](#data-consumer)
-- [`DataVerse`](#dataverse)
-- [`Data`](#data)
+- [Domain](#domain)
+- [Data Provider](#data-provider)
+- [Data Consumer](#data-consumer)
+- [DataVerse](#dataverse)
+- [Data](#data)
 
 ```#dataspace, #domain, #dataverse, #data```
 
@@ -612,9 +641,9 @@ by [Data Spaces](#dataspace).
 #### see
 
 - [Domain](#domain)
-- [`DataSpace`](#dataspace)
+- [DataSpace](#dataspace)
 
-```#dataverse, #data```
+```#dataverse, #domain, #dataspace```
 
 ---
 
@@ -658,13 +687,15 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 
 ### Employee
 
+"Employee" (**EMP**).
+
 ```#emp, #employee, #person, #agent```
 
 ---
 
 ### Employee, External
 
-External Employee (`fua:EmployeeExternal`, **EMPEX**)
+"External Employee" (`fua:EmployeeExternal`, **EMPEX**)
 
 ```#empex, #employee-external, #employee, #person, #agent```
 
@@ -1347,10 +1378,11 @@ A Process is interruptible.
 
 #### see
 
-- [`Data Type Property`](#data-type-property)
-- [`Object Property`](#object-property)
+- [Data Type Property](#data-type-property)
+- [Object Property](#object-property)
+- [Subject](#subject)
 
-```#property```
+```#property, #subject```
 
 ---
 
@@ -1362,7 +1394,7 @@ An [agent](#agent), providing resources, act in its [role](#role) [Provider](#Pr
 
 #### see
 
-- [`Data Provider`](#data-provider)
+- [Data Provider](#data-provider)
 
 ```#provider, #role```
 
@@ -1442,10 +1474,10 @@ Rules are typically presented in [policies](#policy).
 
 #### see
 
-- [`Policy`](#policy)
-- [`Natural Language Policy`](#natural-language-policy)
-- [`Machine Readable Policy`](#machine-readable-policy)
-- [`Open Digital Rights Language`](#open-digital-rights-language)
+- [Policy](#policy)
+- [Natural Language Policy](#natural-language-policy)
+- [Machine Readable Policy](#machine-readable-policy)
+- [Open Digital Rights Language](#open-digital-rights-language)
 
 ```#rule, #constraint, #policy```
 
@@ -1460,8 +1492,8 @@ being [instantiated](#service-instance).
 
 #### see
 
-- [`Service Model`](#service-instance)
-- [`Service Instance`](#service-model)
+- [Service Model](#service-instance)
+- [Service Instance](#service-model)
 - [GAIAboX (GBX)](../gbx/README.md)
 
 #### see also
@@ -1476,7 +1508,7 @@ being [instantiated](#service-instance).
 
 #### see
 
-- [`Web Service`](#web-service)
+- [Web Service](#web-service)
 - [GAIAboX (GBX)](../gbx/README.md)
 
 ---
@@ -1551,6 +1583,10 @@ The Shapes Constraint Language.
 
 ### Subject
 
+### see
+
+- [Property](#property)
+
 ```#subject```
 
 ---
@@ -1562,6 +1598,18 @@ The Shapes Constraint Language.
 ---
 
 ## T
+
+### Table of Content
+
+"Table of Content" (**TOC**).
+
+#### see
+
+- [TOC](#toc)
+
+```#tbc, #table-of-content```
+
+---
 
 ### tag
 
@@ -1578,7 +1626,7 @@ by given Agent acting as a consumer.
 
 #### see
 
-- [`Usage Control`](#usage-control)
+- [Usage Control](#usage-control)
 
 #### see also
 
@@ -1601,6 +1649,14 @@ type [`xsd:dateTimestamp`](https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp)
 
 ---
 
+### TOC
+
+Table of Content (**TOC**).
+
+```#toc, #table-of-content```
+
+---
+
 ### TRACL
 
 The "Transformation, Translation, Transmutation and Conversion Language"
@@ -1608,7 +1664,7 @@ The "Transformation, Translation, Transmutation and Conversion Language"
 
 #### see
 
-- [`Decide Profile TRACL`](../extension/decide/profile/tracl/README.md)
+- [Decide Profile TRACL](../extension/decide/profile/tracl/README.md)
 - [`ODRL ("Open Digital Rights Language")`](#odrl)
 
 ```#tracl, #control-language, #control```
@@ -1660,7 +1716,7 @@ Ontology `fua`, extensions, profiles and examples are written in `turtle`.
 
 #### see
 
-- [`Digital Twin`](#digital-twin)
+- [Digital Twin](#digital-twin)
 
 ---
 
@@ -1668,7 +1724,7 @@ Ontology `fua`, extensions, profiles and examples are written in `turtle`.
 
 #### see
 
-- [`Base Twin`](#base-twin)
+- [Base Twin](#base-twin)
 
 ---
 
@@ -1676,7 +1732,7 @@ Ontology `fua`, extensions, profiles and examples are written in `turtle`.
 
 #### see
 
-- [`Physical Twin`](#physical-twin)
+- [Physical Twin](#physical-twin)
 
 ---
 
@@ -1687,6 +1743,12 @@ Ontology `fua`, extensions, profiles and examples are written in `turtle`.
 "**U**sage **Co**ntrol" ([**UCON**](./shortcut.md#ucon)). [Controlling](#controller) usage of given
 resource ([data](#data)) to accomplish **and**
 preserve [_Data Sovereignty_](#data-sovereignty).
+
+#### see
+
+> TODO: FUCON
+
+- [FCON](TODO:)
 
 #### see also (W3C)
 
@@ -1708,7 +1770,7 @@ preserve [_Data Sovereignty_](#data-sovereignty).
 
 #### see also
 
-- [`Web Service`, Wikipedia](https://en.wikipedia.org/wiki/Web_service)
+- [Web Service, Wikipedia](https://en.wikipedia.org/wiki/Web_service)
 
 ```#web-service, #ws```
 
@@ -1718,8 +1780,14 @@ preserve [_Data Sovereignty_](#data-sovereignty).
 
 #### see
 
-- [`FLOW`](#flow)
+- [FLOW](#flow)
 
 ```#workflow, #flow```
+
+---
+
+## Summary
+
+The [glossary](./README.md) acts as a gate to further [information](#information) and more detailed explanations.
 
 ---

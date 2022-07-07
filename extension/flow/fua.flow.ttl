@@ -1,0 +1,83 @@
+@prefix dct:        <http://purl.org/dc/terms/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix ldp:        <http://www.w3.org/ns/ldp#> .
+@prefix org:        <http://www.w3.org/ns/org#> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+## TODO: prov
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:       <http://www.w3.org/2006/time#> .
+@prefix vann:       <http://purl.org/vocab/vann/> .
+@prefix voaf:       <http://purl.org/vocommons/voaf#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix nrd:        <https://www.nicos-rd.com/> .
+
+@prefix fua:        <https://www.nicos-rd.com/fua#> .
+## TODO: fun
+@prefix flow:       <https://www.nicos-rd.com/fua/workflow#> .
+
+### TAG: #flow, #workflow, #process, #activity, #action, #function ###
+
+## TODO: flow ontology
+
+flow:Workflow
+    a                owl:Class ;
+    rdfs:label       "Workflow"@en ;
+    rdfs:label       "Workflow"@de ;
+    dct:description  """Class of Workflows."""@en ;
+    ## region skos
+    a                skos:Collection ;
+    a                ldp:BasicContainer ; ## TODO : make it a better container...
+    skos:notation    "Workflow"^^xsd:string ;
+    skos:prefLabel   "flow:Workflow"@en ;
+    skos:scopeNote   "All terms of fua Workflow"@en ;
+    ## region skos :: member
+    ## region skos :: member :: Class
+    skos:member      flow:Process ;
+    skos:member      flow:Activity ;
+    skos:member      flow:Action ;
+    ## endregion skos :: member :: Class
+    ## region skos :: member :: Property
+    ## endregion skos :: member :: Property
+    ## endregion skos :: member
+    ## region skos
+    rdfs:isDefinedBy fua: ;
+.
+
+flow:Process
+    a                owl:Class ;
+	rdfs:subClassOf  prov:Activity ;
+	rdfs:subClassOf  fun:Function ;
+    skos:notation    "Process"^^xsd:string ;
+    rdfs:label       "Process"@en ;
+    rdfs:label       "Prozess"@de ;
+    dct:description  """Class of Processes."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+flow:Activity
+    a                owl:Class ;
+	rdfs:subClassOf  prov:Activity ;
+	rdfs:subClassOf  fun:Function ;
+    skos:notation    "Activity"^^xsd:string ;
+    rdfs:label       "Activity"@en ;
+    rdfs:label       "Aktivität"@de ;
+    dct:description  """Class of Activities."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+flow:Action
+    a                owl:Class ;
+	rdfs:subClassOf  prov:Activity ;
+	rdfs:subClassOf  fun:Function ;
+    skos:notation    "Action"^^xsd:string ;
+    rdfs:label       "Action"@en ;
+    rdfs:label       "Aktion"@de ;
+    dct:description  """Class of Actions."""@en ;
+    rdfs:isDefinedBy fua: ;
+.
+
+## EOF fua.flow.ttl
