@@ -102,7 +102,7 @@ Eco System ([**EC**](../../glossary/shortcut.md#ec)).
 
 ### Operating Agent
 
-Operating Agent ([**OA**](../../glossary/shortcut.md#oa).
+Operating Agent ([**OA**](../../glossary/shortcut.md#oa)).
 
 ```#operating-agent, #agent```
 

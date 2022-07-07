@@ -215,11 +215,11 @@ Preferred namespace prefix: `ftime`
 
 ```#idp, #identity-provider```
 
-## EC
+## ES
 
 - [**E**co **S**ystem, glossary](./README.md#eco-system).
 
-```#ec, #eco-system```
+```#es, #eco-system```
 
 ## EMP
 

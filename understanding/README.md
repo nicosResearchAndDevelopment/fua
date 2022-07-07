@@ -2,6 +2,26 @@
 
 Some thoughts on [fua](../README.md)-underlying concepts, ideas and interpretations.
 
+## Table of Content
+
+- [Introduction](#introduction)
+- [Internal View](#internal-view)
+- [The Presentation Layer is Somewhere Else](#the-presentation-layer-is-somewhere-else)
+- [Do NOT Cover](#do-not-cover)
+- [fua exposes Namespaces](#fua-exposes-namespaces)
+- [turtle and Linked Data](#turtle-and-linked-data)
+- [Dirty Hands](#dirty-hands)
+- [Deep Dive](#deep-dive)
+    - [Understanding "Identifier"](#understanding-identifier)
+    - [Understanding "Data and Information"](#understanding-data-and-information)
+    - [Understanding "Action and Activity"](#understanding-action-and-activity)
+    - [Understanding "Data Exchange"](#understanding-data-exchange)
+- [Using fua](#using-fua)
+- [Does Humor Belong to an Ontology or Data?](#does-humor-belong-to-an-ontology-or-data)
+- [You are Welcome!](#you-are-welcome)
+
+*"Understanding fua", Table of Content*.
+
 ## Introduction
 
 ---
@@ -36,15 +56,17 @@ like...
 
 [fua](../README.md) aims **NOT** to cover well know concepts, ontologies and schemas, like (in alphabetical order):
 
-- `dct` (["DCMI Metadata Terms"](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/))
-- `foaf` (["Friend Of A Friend"](http://xmlns.com/foaf/spec/))
-- `odrl` (["ODRL Information Model 2.2"](https://www.w3.org/TR/odrl-model/))
-- `org` (["The Organization Ontology"](https://www.w3.org/TR/vocab-org/))
-- `prov` (["PROV Model Primer"](https://www.w3.org/TR/prov-primer/))
-- `skos` (["SKOS Simple Knowledge Organization System"](https://www.w3.org/TR/skos-reference/))
-- `time` (["Time Ontology in OWL"](https://www.w3.org/TR/owl-time/))
-- `vc` (["Verifiable Credentials Data Model v1.1"](https://www.w3.org/TR/vc-data-model/))
-- `xsd` (["W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes"](https://www.w3.org/TR/xmlschema11-2/))
+| Prefix   | Specification                                                                                          |
+|:---------|:-------------------------------------------------------------------------------------------------------|
+| dct      | [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)               |
+| foaf     | [Friend Of A Friend](http://xmlns.com/foaf/spec/)                                                      |
+| odrl     | [ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/)                                        |
+| org      | [The Organization Ontology](https://www.w3.org/TR/vocab-org/)                                          |
+| prov     | [PROV Model Primer](https://www.w3.org/TR/prov-primer/)                                                |
+| skos     | [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/)                     |
+| time     | [Time Ontology in OWL](https://www.w3.org/TR/owl-time/)                                                |
+| vc       | [Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/)                         |
+| xsd      | [W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes](https://www.w3.org/TR/xmlschema11-2/) |
 
 ...to list some of those [fua](../README.md) has a strong relation to.
 
@@ -54,25 +76,30 @@ like...
 
 [fua](../README.md) itself exposes some "Namespaces" (behaving as prefixes), like:
 
-- `self` (["Self"](../self/README.md))
-- `narr` (["Narration"](../extension/narration/README.md))
-- `dave` (["DataVerse"](../extension/dataverse/README.md))
+| Prefix | Specification                                 |
+|:-------|:----------------------------------------------|
+| flow   | [Workflow](../extension/flow/README.md)       |
+| dave   | [DataVerse](../extension/dataverse/README.md) |
+| narr   | [Narration](../extension/narration/README.md) |
+| self   | [Self](../self/README.md)                     |
 
-Under [Decide](../extension/decide/README.md) as [odrl profiles](https://www.w3.org/TR/odrl-model/#profile)):
+Under [_Decide_](../extension/decide/README.md) as [ODRL-profiles](https://www.w3.org/TR/odrl-model/#profile):
 
-- `time` (["Time"](../extension/decide/profile/time/README.md),
-  extending ["Time Ontology in OWL"](https://www.w3.org/TR/owl-time/))
-- `dacl` (["Dynamic Access Control Language"](../extension/decide/profile/dacl/README.md))
-- `tracl` (["Transformation, Translation, Transmutation and Conversion Language"](../extension/decide/profile/tracl/README.md))
+| Prefix | Specification                                                                                                       |
+|:-------|:--------------------------------------------------------------------------------------------------------------------|
+| ftime  | [Time](../extension/decide/profile/ftime/README.md)                                                                 |
+|        | ...extending [Time Ontology in OWL](https://www.w3.org/TR/owl-time/)                                                |
+| flow   | [Workflow](../extension/flow/README.md)                                                                             |
+| dacl   | [Workflow](../extension/flow/README.md)                                                                             |
+| tracl   | [Transformation, Translation, Transmutation and Conversion Language](../extension/decide/profile/tracl/README.md)  |
 
-[fua](../README.md)s ["extensions"](../extension/README.md) need sometimes their own namespace:
+To get in touch with some problems from outer space:
 
-- `univ` (["Universe"](../extension/universe/README.md))
-
-[fua](../README.md)s ["examples"](../example/README.md) need sometimes their own namespace:
-
-- `tuni` (["_The_ Universe"](../example/theuniverse/README.md))
-- `puni` (["_Parallel_ Universe"](../example/theuniverse/README.md))
+| Prefix | Space                                                   |
+|:-------|:--------------------------------------------------------|
+| univ   | [Universe](../extension/universe/README.md)             |
+| tuni   | [_The_ Universe](../example/theuniverse/README.md)      |
+| puni   | [_Parallel_ Universe](../example/theuniverse/README.md) |
 
 ---
 
@@ -143,7 +170,7 @@ a standard and exists because of its implementation done by [nicos](https://www.
 ---
 
 ## Does Humor Belong to an Ontology or Data?
-[](#does-humor-belong-to-an-ontology-or-data)
+
 The authors of [`foaf`](http://xmlns.com/foaf/spec/#term_dnaChecksum) had found an answer in 2014:
 
 ```turtle

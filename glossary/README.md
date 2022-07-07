@@ -238,6 +238,10 @@ Bob has to execute commands, being [controlled](#controller) by [Alice](#alice).
 
 ---
 
+### Claim
+
+---
+
 ### Clearing House
 
 #### see
@@ -349,6 +353,10 @@ A language to express [control](#control) over given asset.
 #### see
 
 - [`Usage Control`](#usage-control)
+
+---
+
+### Credential
 
 ---
 
@@ -643,6 +651,8 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 ## E
 
 ### Eco System
+
+"Eco System" (**ES**).
 
 ---
 
