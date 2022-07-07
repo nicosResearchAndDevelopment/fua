@@ -696,6 +696,8 @@ External Employee (`fua:EmployeeExternal`, **EMPEX**)
 
 ### FLOW
 
+"Workflow" (**FLOW**).
+
 ```#flow, #workflow```
 
 ---
