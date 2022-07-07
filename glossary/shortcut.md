@@ -10,22 +10,25 @@ Shortcuts, abbreviations and acronyms used in `fua`.
 | [AOS](#aos)     | [Authorization Service](./README.md#authorization-service)   |                                             |
 | [AU](#au)       | [Authority](./README.md#authority)                           |                                             |
 | [CA](#ca)       | [Certificate Authority](./README.md#certificate-authority)   |                                             |
-| [CB](#cb)       | [Certification Body](./README.md#certification-body)         | same as: [NOTA](#nota)                      |
+| [CB](#cb)       | [Certification Body](./README.md#certification-body)         | Same as: [NOTA](#nota).                     |
 | [CH](#ch)       | [Clearing House](./README.md#clearing-house)                 |                                             |
 | [D](#d)         | [Data](./README.md#data)                                     |                                             |
 | [DACL](#dacl)   | [Dynamic Access Control Language](./README.md#dacl)          |                                             |
 | [DAVE](#dave)   | [DataVerse](./README.md#dataverse)                           |                                             |
-| [DS](#ds)       | [Data Space](./README.md#data-space)                         |                                             |
+| [DS](#ds)       | [DataSpace](./README.md#dataspace)                           |                                             |
 | [EC](#ec)       | [Eco System](./README.md#eco-system)                         | Data.                                       |
-| [FLOW](#flow)   | `fua` flow                                                   | WorkFlow                                    |
+| [EMP](#emp)     | [Employee](./README.md#employee)                             | Person.                                     |
+| [EMPEX](#empex) | [Employee, External](./README.md#employee-external)          | External Employee (as Person).              |
+| [FLOW](#flow)   | `fua` flow                                                   | WorkFlow.                                   |
 | [FTIME](#ftime) | `fua` time                                                   | [ODRL](../glossary/README.md#odrl) profile. |
 | [IA](#ia)       | Information, Anthropocentric                                 |                                             |
 | [ID](#id)       | Identifier                                                   |                                             |
 | [IDE](#ide)     | Integrated Development Environment                           |                                             |
+| [IDEA](#idea)   | Idea                                                         |                                             |
 | [IdP](#idp)     | Identity Provider                                            |                                             |
 | [LS](#ls)       | Logging Service                                              |                                             |
 | [NLP](#nlp)     | Natural Language Policy                                      |                                             |
-| [NOTA](#nota)   | Notarization                                                 | same as: [CB](#cb)                          |
+| [NOTA](#nota)   | Notarization                                                 | Same as: [CB](#cb).                         |
 | NIC             | [nicos AG](https://www.nicos-ag.com)                         |                                             |
 | NRD             | nicos Research & Development GmbH                            |                                             |
 | [OA](#oa)       | Operating Agent                                              |                                             |
@@ -158,15 +161,15 @@ of [DataVerse](./README.md#dataverse).
 
 ## DS
 
-- [**D**ata **S**pace, glossary](./README.md#data-space).
+- [**D**ata**S**pace, glossary](./README.md#dataspace).
 
-```#ds, #data-space```
+```#ds, #dataspace```
 
 ## FLOW
 
 - [**F**ua Work**Flow**, glossary](./README.md#flow).
 
-```#flow, #workflow``
+```#flow, #workflow, #process, #action, #activity``
 
 ## FTIME
 
@@ -200,6 +203,12 @@ Preferred namespace prefix: `ftime`
 
 ```#ide, #integrated-development-environment```
 
+## IDEA
+
+"**Idea**"
+
+```#idea```
+
 ## IdP
 
 - [**Id**entity **P**rovider, glossary](./README.md#identity-provider).
@@ -211,6 +220,18 @@ Preferred namespace prefix: `ftime`
 - [**E**co **S**ystem, glossary](./README.md#eco-system).
 
 ```#ec, #eco-system```
+
+## EMP
+
+- [**Emp**loyee, glossary](./README.md#employee).
+
+```#emp, #employee, #person#, #agent```
+
+## EMPEX
+
+- [**Ex**ternal **Emp**loyee, glossary](./README.md#employee-external).
+
+```#empex, #employee-external, #employee, #person, #agent```
 
 ## LS
 

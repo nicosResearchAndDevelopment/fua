@@ -1,6 +1,8 @@
 # `fua` DataVerse
 
-The "DataVerse"  ([**DAVE**](../../glossary/shortcut.md#dave)) is a construct holding DataVerse Eco Systems.
+The DataVerse ([**DAVE**](../../glossary/shortcut.md#dave)) is an Eco System.
+
+The DataVerse is an Eco Systems of Eco Systems.
 
 ## Table of Content
 
@@ -9,6 +11,7 @@ The "DataVerse"  ([**DAVE**](../../glossary/shortcut.md#dave)) is a construct ho
 - [Eco System](#eco-system)
 - [Operating Agent](#operating-agent)
 - [Domain](#domain)
+    - [Domain Monitoring](#domain-monitoring)
 - [Registry](#registry)
 - [Logging Service](#logging-service)
 - [Clearing House](#clearing-house)
@@ -19,23 +22,24 @@ The "DataVerse"  ([**DAVE**](../../glossary/shortcut.md#dave)) is a construct ho
     - [Identity Providing Services](#identity-providing-services)
         - [Authentication Service](#authentication-service)
         - [Authorization Service](#authorization-service)
-- [Data Space](#data-space)
+- [DataSpace](#dataspace)
 - [Trust](#trust)
-    - [Intra-Domain](#intra-domain)
-    - [Extra-Domain](#extra-domain)
+    - [Domain Trust](#domain-trust)
+        - [Intra-Domain Trust](#intra-domain-trust)
+        - [Extra-Domain Trust](#extra-domain-trust)
     - [Trust Policy](#trust-policy)
-        - [Trust Request](#trust-request)
-        - [Trust Offer](#trust-offer)
-        - [Trust Agreement](#trust-agreement)
+        - [Trust Request Policy](#trust-request-policy)
+        - [Trust Offer Policy](#trust-offer-policy)
+        - [Trust Agreement Policy](#trust-agreement-policy)
 
-*DataVerse, Table of content*.
+*Table of Content "DataVerse"*.
 
 ---
 
 ## Introduction
 
 The "DataVerse" ([**DAVE**](../../glossary/shortcut.md#dave)), a collection of [Eco System](#eco-system),
-[Domains](#data-domain) and [Data Spaces](#data-space).
+[Domains](#domain) and [Data Spaces](#dataspace).
 
 It is populated by [Infrastructure Services](../../glossary/README.md#infrastructure-service) (depending on
 given [Eco System](#eco-system)),
@@ -44,7 +48,7 @@ Catalogues, Brokers (to be understood as _something_
 like ["Yellow Pages", Wikipedia](https://en.wikipedia.org/wiki/Yellow_pages)). And - completing the roundel - Logging
 Services and Clearing Houses.
 
-Other Services, bring one [Eco System](#eco-system) or [Data Space](#data-space) to life, are those (evolving the main
+Other Services, bring one [Eco System](#eco-system) or [DataSpace](#dataspace) to life, are those (evolving the main
 topic ["Data Exchange"](../glossary/README.md#data-exchange) on
 the ["Payload Data"](../glossary/README.md#payload-data) Layer) acting
 under well known [roles](../glossary/README.md#role) ["Data Provider"](../glossary/README.md#data-provider)
@@ -100,7 +104,7 @@ Eco System ([**EC**](../../glossary/shortcut.md#ec)).
 
 Operating Agent ([**OA**](../../glossary/shortcut.md#oa).
 
-```#operating-agent```
+```#operating-agent, #agent```
 
 ---
 
@@ -115,6 +119,12 @@ A given Domain exposes a Federation (a collaboration), containing all [Agents](.
 participants, [Service Instances](../../glossary/README.md#service-instance), etc.).
 
 ```#domain```
+
+---
+
+#### Domain Monitoring
+
+```#domain-monitoring, #domain```
 
 ---
 
@@ -175,7 +185,7 @@ See also (same as): [Certification Body](#certification-body).
 
 #### Certificate Authority
 
-A Certificate Authority [(**CA**)](../../glossary/shortcut.md#ca) is an [authority](#authority)(
+A Certificate Authority [(**CA**)](../../glossary/shortcut.md#ca) is an [authority](#authority).
 
 ```#certificate-authority, #ca, #authority```
 
@@ -205,12 +215,12 @@ given [Agent](../../glossary/README.md#agent).
 
 ---
 
-## Data Space
+## DataSpace
 
-A Data Space [(**DS**)](../../glossary/shortcut.md#ds) (_the_ Data Space) is brought to life by a dynamic landscape
+A DataSpace [(**DS**)](../../glossary/shortcut.md#ds) (_the_ DataSpace) is brought to life by a dynamic landscape
 of [data](../glossary/README.md#data).
 
-A Data Space is a ***Trusted Data Space*** if it acts on top of underlying [Domain(s)](#domain), onboarding-mechanisms,
+A DataSpace is a ***Trusted DataSpace*** if it acts on top of underlying [Domain(s)](#domain), onboarding-mechanisms,
 infrastructure components, providing services, etc. - by given [Eco System](#eco-system) and those normative
 rules, models, schemata and basic mechanisms stated by *this* Eco System with the help of
 *this* Eco Systems [Identity Provider](#identity-provider).
@@ -222,35 +232,43 @@ in given [the terms of use](../../glossary/README.md#terms-of-use): *the* Data P
 [Data Sovereignty](../../glossary/README.md#data-sovereignty) and the [***Intra-Domain***](#intra-domain)-Trust is
 established.
 
-A Data Space **MAY** overstretch two or more [Eco Systems](#eco-system). If this arrives, there **MAY** be
+A DataSpace **MAY** overstretch two or more [Eco Systems](#eco-system). If this arrives, there **MAY** be
 *a* [trust](#trust) between those [Domains](#domain) or at least between two [Agents](../../glossary/README.md#agent)
 hosted by (those ***two***) different domains, understanding the mechanisms and rules of each other. If this happens
 this way the [***Extra-Domain***](#extra-domain)-Trust is established - hopefully based on
 a [Trust Policy](#trust-policy)...
 
-```#data-space```
+```#dataspace, #data```
 
 ---
 
 ## Trust
 
-### Intra-Domain
+```#trust```
 
-```#intra-domain, #trust```
+### Domain Trust
+
+```#domain-trust, #trust```
+
+#### Intra-Domain Trust
+
+```#intra-domain-trust, #domain-trust, #trust```
 
 ---
 
-### Extra-Domain
+#### Extra-Domain Trust
 
-```#extra-domain, #trust```
+```#extra-domain-trust, #domain-trust, #trust```
 
 ---
 
 ### Trust Policy
 
-#### Trust Request
+```#trust-policy, #trust```
 
-A "Trust Request" is a [Trust Policy](#trust-policy).
+#### Trust Request Policy
+
+A "Trust Request Policy" is a [Trust Policy](#trust-policy).
 
 The requesting Agent generates *the* Trust Request from the perspective of given requested Party (Agent).
 Doing so, requesting Agent is formulated ind *the* Trust Request being *the* "assignee" (role) - as given Party
@@ -260,24 +278,24 @@ desired credentials at the end of the workflow.
 *The* issuing Party is formulated in *this* Trust Request as *the* "assigner" (role), publishing the desired credentials
 at the end of the workflow.
 
-```#trust-request, #trust-policy, #trust```
+```#trust-request-policy, #trust-policy, #trust```
 
 ---
 
-#### Trust Offer
+#### Trust Offer Policy
 
-A "Trust Offer" is a [Trust Policy](#trust-policy).
-
-```#trust-offer, #trust-policy, #trust```
+A "Trust Offer Policy" is a [Trust Policy](#trust-policy).
 
 The *assigner* formulates a Trust Offer. This Offer ***MAY*** be based on a
 preceding [Trust Request](#trust-request)). The *assigner* passes *the* Trust Offer to given *assignee*,
 
+```#trust-offer-policy, #trust-policy, #trust```
+
 ---
 
-#### Trust Agreement
+#### Trust Agreement Policy
 
-A "Trust Agreement" is a [Trust Policy](#trust-policy).
+A "Trust Agreement Policy" is a [Trust Policy](#trust-policy).
 
 A Trust Agreement is a contract between given *assigner* and *assignee*, expressing under wich circumstance aimed
 trust will be won.
@@ -289,17 +307,9 @@ as [Data Consumer](../../glossary/README.md#data-consumer) is able to consume *a
 
 A Trust Agreement can be *bidirectional*.
 
-> ***TBC***: A Trust Agreement can be *multi-directional*.
+> ***TBC***: A Trust Agreement can be *multi-directional*?
 
-```#trust-agreementt, #trust-policy, #trust```
-
----
-
-```#trust-policy, #trust```
-
----
-
-```#trust```
+```#trust-agreement-policy, #trust-policy, #trust```
 
 ---
 

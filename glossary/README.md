@@ -492,16 +492,16 @@ The "Data Layer" is an overarching [Layer](#layer), so it can be stated
 
 ---
 
-### Data Domain
+### Domain
 
 ---
 
 #### see
 
-- [`DataDomain`, DataVerse](../extension/dataverse/README.md#data-domain)
-- [`Data Verse`](#dataverse)
+- [Domain, (DataVerse)](../extension/dataverse/README.md#domain)
+- [DataVerse](#dataverse)
 
-```#data-domain, #dataverse```
+```#domain, #dataverse```
 
 ---
 
@@ -566,26 +566,26 @@ Another, often used _chatchphrase_ is "Data Provenance". But `fua` is focused on
 
 ---
 
-### Data Space
+### DataSpace
 
-A "Data Space" is a dynamic collaboration of given [Data Domains](#data-domain). It can be also understood as an
-isolated [Data Domain](#data-domain), populated by [Service Instances](#service.instance) (acting as
-a [Data Provider](#data-provider) or [Data Consumer](#data-consumer)), so putting up a "Data Space".
+A "DataSpace" is a dynamic collaboration of given [Domains](#domain). It can be also understood as an
+isolated [Domain](#domain), populated by [Service Instances](#service.instance) (acting as
+a [Data Provider](#data-provider) or [Data Consumer](#data-consumer)), so putting up a "DataSpace".
 
-A "Data Space" _comes to life_ when [data](#data) or, to be more
+A "DataSpace" _comes to life_ when [data](#data) or, to be more
 accurate, [Payload Data](#payload-data) is [exchanged](#data-exchange).
 
-A [Data Domain](#data-domain) even exists _without_ exchanging [data](#data).
+A [Domain](#domain) even exists _without_ exchanging [data](#data).
 
 #### see
 
-- [`Data Domain`](#data-domain)
+- [`Domain`](#domain)
 - [`Data Provider`](#data-provider)
 - [`Data Consumer`](#data-consumer)
 - [`DataVerse`](#dataverse)
 - [`Data`](#data)
 
-```#data-space, #data-domain, #dataverse, #data```
+```#dataspace, #domain, #dataverse, #data```
 
 ---
 
@@ -598,13 +598,13 @@ A [Data Domain](#data-domain) even exists _without_ exchanging [data](#data).
 ### DataVerse
 
 ["DataVerse" (fua-extension)](../extension/dataverse/README.md) ([**DAVE**](./shortcut.md#dave)) is a collection
-of [Data Domains](#data-domain), hovered
-by [Data Spaces](#data-space).
+of [Domains](#domain), hovered
+by [Data Spaces](#dataspace).
 
 #### see
 
-- [`Data Domain`](#data-domain)
-- [`Data Space`](#data-space)
+- [Domain](#domain)
+- [`DataSpace`](#dataspace)
 
 ```#dataverse, #data```
 
@@ -619,14 +619,14 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 
 #### see
 
-- [`Data Domain`](#data-domain)
+- [Domain](#domain)
 
 #### see also
 
 - [Active Directory, Services, Microsoft](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services)
 - [Active Directory, Wikipedia](https://en.wikipedia.org/wiki/Active_Directory)
 
-```#domain, #data-domain```
+```#domain, #domain```
 
 ---
 
@@ -646,6 +646,20 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 
 ---
 
+### Employee
+
+```#emp, #employee, #person, #agent```
+
+---
+
+### Employee, External
+
+External Employee (`fua:EmployeeExternal`, **EMPEX**)
+
+```#empex, #employee-external, #employee, #person, #agent```
+
+---
+
 ### Example
 
 [`fua`](#fua) works with following examples:
@@ -659,6 +673,14 @@ _authenticating_ and/or _authorizing_ [users](#problem-layer).
 #### [Dataverse "The Universe"](../example/dataversetuni/README.md)
 
 ```#example, #weatherstation, #elevator, #unidataverse```
+
+---
+
+### External Employee
+
+#### see
+
+- [Employee, External](#employee-external)
 
 ---
 
@@ -866,14 +888,14 @@ Something derived from [Data](#data).
 
 "Implementation" (**IMPL**) act as a _hint_ for implementers.
 
-#### turtle
+#### t u r t l e
 
 ```turtle
 ## IMPL : Stay calm and keep coding!
 rdfs:comment """IMPL : Stay calm and keep coding!"""@en
 ```
 
-#### json
+#### j s o n
 
 [Keep in mind...](../reading/README.md#json)
 
@@ -1661,7 +1683,7 @@ preserve [_Data Sovereignty_](#data-sovereignty).
 ##### see also (International Data Spaces, IDS)
 
 - ["Data Sovereignty: Updated Position Paper on Data Usage Control in the IDS" (Eitel)](https://internationaldataspaces.org/data-sovereignty-updated-position-paper-on-data-usage-control-in-the-ids/)
-- ["IDS Usage Control Policies" (Data Space Connector)](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl)
+- ["IDS Usage Control Policies" (DataSpace Connector)](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl)
 - ["Usage Control" (IDS Trusted Connector)](https://industrial-data-space.github.io/trusted-connector-documentation/docs/usage_control/)
 
 ```#usage-control, #ucon, #terms-of-use, #control-language, #control, #ids```
