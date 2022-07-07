@@ -1,0 +1,123 @@
+    ## region upper concepts
+## order ALPHA
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix fno:    <https://w3id.org/function/ontology#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix ldp:    <http://www.w3.org/ns/ldp#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:   <http://www.w3.org/2006/time#>.
+@prefix unit:   <http://qudt.org/vocab/unit/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix void:   <http://rdfs.org/ns/void#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+## endregion upper concepts
+
+@prefix nrd:    <https://www.nicos-rd.com/> .
+@prefix fua:    <https://www.nicos-rd.com.org/fua#> .
+@prefix self:   <http://www.nicos-rd.com/fua/self#> .
+@prefix gbx:    <https://www.nicos-rd.com/fua/gaiabox#> .
+
+@prefix dave:   <https://www.nicos-rd.com/fua/dataverse#> .
+
+dave:
+    a                             voaf:Vocabulary ;
+    a                             owl:Ontology ;
+    a                             self:Self ;
+    rdfs:label                    "DataVerse Model"@en ;
+    dct:title                     "DataVerse-Model for Data Spaces"@en ;
+    dct:description               """The 'DataVerse-Model for Data Spaces' aims to organize joint or disjoint Data Spaces. It does not cover data-modelling of data transported on applications-layer (transported by 'data-provider' and 'data-consumer') in given and "living, productive" eco-system, exchanging real-word data.
+The 'DataVerse-Model' has a strong focus on 'The Organization Ontology', W3C, to be enriched with all those."""@en ;
+## TODO : cc:license                    <http://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:creator                   <https://github.com/jlangkau> ;
+    dct:creator                   <https://jlangkau.solidweb.org/> ;
+    dct:publisher                 <http://www.nicos-rd.com/> ;
+    dct:created                   "2021-11-29"^^xsd:date ;
+    dct:modified                  "2022-07-12"^^xsd:date ; ## REM : replaced by assembly
+    owl:versionInfo               "0.0.3" ;
+    vann:preferredNamespaceUri    "https://www.nicos-rd.com/fua/dataverse#" ;
+    vann:preferredNamespacePrefix "dave:" ;
+    void:vocabulary               vann:, void:, voaf:, dct: ;
+    void:vocabulary               org: ;
+    void:vocabulary               fua: ;
+    rdfs:comment                  """The 'DataVerse-Model for Data Spaces' does not aim to cover well-known ontologies, like "Friend of a Friend" ('foaf') or "The Organization Ontology" ('org'). Expressing sub-classes only tries to enrich given parent classes.
+The 'DataVerse-Model for Data Spaces' defines classes and properties for describing and organising Data Spaces."""@en ;
+    ## region skos
+    a                             skos:Collection ;
+    a                             ldp:BasicContainer ; ## TODO : make it a better container...
+    skos:notation                 "Artificial"^^xsd:string ;
+    skos:prefLabel                "fua:Artificial"@en ;
+    skos:prefLabel                "DataVerseModel"^^xsd:string ;
+    skos:scopeNote                "All terms of fua DataVerse"@en ;
+    ## region skos :: member
+    ## region skos :: member :: Class
+    skos:member                   dave:DataVerse ;
+    ## endregion skos :: member :: Class
+    ## region skos :: member :: Property :: ALPHA
+    skos:member                   dave:acronym ;
+    skos:member                   dave:dataVerse ;
+    ## endregion skos :: member :: Property
+    ## endregion skos :: member
+    ## endregion skos
+    rdfs:seeAlso                  "https://www.w3.org/TR/vocab-org/" ; ## TODO : check it
+    rdfs:isDefinedBy              nrd: ;
+. # dave:
+
+dave:DataVerse
+    a                owl:Class ;
+    rdfs:subClassOf  dave:EcoSystem ;
+    rdfs:subClassOf  self:Self ;
+    rdfs:label       "Class of DataVerses"@en ;
+    rdfs:label       "Klasse der DataVerses"@de ;
+    ## region skos
+    skos:notation    "DataVerse"^^xsd:string ;
+    skos:prefLabel   "DataVerse Class"^^xsd:string ;
+    ## endregion skos
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:dataVerse
+    a                owl:ObjectProperty ;
+    skos:notation    "dataVerse"^^xsd:string ;
+    skos:prefLabel   "DataVerse"^^xsd:string ;
+    rdfs:label       "DataVerse"@en ;
+    rdfs:label       "DataVerse"@de ;
+    dct:description  """Arbitrary property to bind a given DataVerse."""@en ;
+    ## REM: "Yes!!!" - 'rdfs:range owl:Thing'
+    rdfs:range       owl:Thing ;
+    rdfs:isDefinedBy nrd: ;
+.
+
+dave:acronym
+    a                  owl:DatatypeProperty ;
+    rdfs:subPropertyOf skos:notation ;
+    skos:notation      "acronym"^^xsd:string ;
+    skos:prefLabel     "Acronym"^^xsd:string ;
+    dct:description    """Due to the nature of 'skos:notation' (and dave:acronym is a sub property of skos:notation) it **MUST** be unique among all acronyms (so, registered agents, like Eco System, DataSpace, or other DataVerses, etc...) used in 'dave:dave'."""@en ;
+    rdfs:label         "Acronym"@en ;
+    rdfs:label         "Akronym"@de ;
+    rdfs:domain        dave:DataVerse ;
+    rdfs:domain        dave:EcoSystem ;
+    rdfs:domain        dave:DataSpace ;
+    rdfs:range         xsd:string ;
+    rdfs:isDefinedBy   nrd: ;
+.
+
+## region Individual
+
+dave:dave
+    a dave:DataVerse ;
+    a fua:Self ;
+    a gbx:GAIAboX ; ## REM: owl:Thing, foaf:Agent
+.
+
+## endregion Individual
+
+## EOF fua.dataverse.ttl

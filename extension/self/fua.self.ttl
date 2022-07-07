@@ -40,7 +40,10 @@
     ## REM: ...and maybe we will see this here also:
     ## a fua:Intelligence ;
     skos:prefLabel                "self"^^xsd:string ;
-    ## REM: if we set 'self:self' then the following line will probably be **NOT** "rdfs:isDefinedBy fua: ;" any longer!!!
+
+    ## region skos
+
+    ## REM: if we set 'self:self' then the following line will probably be **NOT** "rdfs:isDefinedBy nrd: ;" any longer!!!
     rdfs:isDefinedBy              nrd: ;
 . # :
 

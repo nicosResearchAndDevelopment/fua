@@ -45,11 +45,11 @@ on ["Internet of Things" (IoT), Wikipedia](https://en.wikipedia.org/wiki/Interne
 
 This example extends ["The Universe" (**TUNI**)](#the-universe) with the concept of
 ["DataVerse" (**DAVE**)](../extension/dataverse/README.md), so "The Universe" can behave as a collection
-of [Data Spaces](../glossary/README.md#data-space).
+of [Data Spaces](../glossary/README.md#dataspace).
 
 But the story does not stop here - but combines "The Multiverse", populated by given universes
 "The Universe" and the "Parallel Universe" (**PUNI**), also with "DataVerse"-tech to host all known
-[Data Spaces](../glossary/README.md#data-space)...
+[Data Spaces](../glossary/README.md#dataspace)...
 
 ```#tuni-dataverse, #dataverse, #tuni```
 
