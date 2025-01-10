@@ -2,6 +2,8 @@
 
 FUA (framework universe architecture) is a collection of JS modules, scripts and applications to implement solutions for MOTIC (management of things, identities and credentials).
 
+[_&raquo; fua.*_](https://github.com/orgs/nicosResearchAndDevelopment/repositories?q=%22fua.%22)
+
 ## @fua/core
 
 The core contains basic functionality that every FUA module needs. As the core is very important and influences many other modules, the core modules themselves should have no dependencies outside the core to reduce the risk of bugs.
