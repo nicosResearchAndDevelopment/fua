@@ -81,3 +81,9 @@ Scripts to be used locally for automated tasks like maintenance or rendering. Th
 Templates are useful to give a starting point for a common type of module. They can be copied to a new project, but by no means are they suited to be deployed on their own without change.
 
 [_&raquo; fua.template.*_](https://github.com/orgs/nicosResearchAndDevelopment/repositories?q=%22fua.template.%22)
+
+## @fua/glossary
+
+A glossary is an alphabetical list of terms in a particular domain of knowledge with the definitions for those terms. The domain of knowledge being FUA and MOTIC in this case.
+
+[_&raquo; fua.glossary](https://github.com/nicosResearchAndDevelopment/fua.glossary)
